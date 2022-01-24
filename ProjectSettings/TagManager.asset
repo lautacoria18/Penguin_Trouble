@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Suelo
+  - Enemy
+  - Spike
+  - Parry
+  - Hitbox
+  - Wheel
   layers:
   - Default
   - TransparentFX
@@ -14,7 +19,7 @@ TagManager:
   - UI
   - Player
   - Ground
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -41,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Enemy
+    uniqueID: 673502159
     locked: 0
