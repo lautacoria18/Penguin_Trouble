@@ -10,6 +10,10 @@ TagManager:
   - Parry
   - Hitbox
   - Wheel
+  - Parry 2
+  - Parry3
+  - Parry4
+  - Parry5
   layers:
   - Default
   - TransparentFX

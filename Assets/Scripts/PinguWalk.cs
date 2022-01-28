@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class PinguWalk : MonoBehaviour
 {
-
+    
     private Rigidbody2D Rigidbody2D;
     private float Horizontal;
     private Animator Animator;
@@ -13,12 +13,13 @@ public class PinguWalk : MonoBehaviour
     //Variables para el salto
     private float fuerzaSalto = 3.0f;
     private Collider2D collider;
+    public bool canDobleJump = false;
 
     //Variables para el dash 
     public bool Dash;
-    public float Dash_T;
+    public float Dash_T; 
     public float Speed_Dash;
-
+    
     //ojo
     float direction = 1;
 
@@ -32,6 +33,7 @@ public class PinguWalk : MonoBehaviour
     public CapsuleCollider2D CapsuleCol;
 
     public bool dashAndJump = false;
+    
 
     //Matar enemigo
     private bool isJumping = false;
@@ -46,11 +48,17 @@ public class PinguWalk : MonoBehaviour
 
     //Parry
     public bool canParryJump = false;
-
+    public bool canAirDash = false;
 
 
     //
+    public int iLevelToLoad;
+    public string sLevelToLoad;
 
+    public bool useIntegerToLoadLevel = false;
+
+    //
+    public bool moveSlower;
 
     // Start is called before the first frame update
     void Start()
@@ -83,6 +91,22 @@ public class PinguWalk : MonoBehaviour
 
     }
 
+    private void DashAndJump() {
+
+        if (Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.W) && !isJumping) {
+
+            Rigidbody2D.AddForce(new Vector2(0f, 0.5f), ForceMode2D.Impulse);
+
+        }
+
+    }
+
+    IEnumerator changeDash() {
+
+        yield return new WaitForSeconds(0.08f);
+        canAirDash = false;
+    }
+
     private void DashMove() {
 
         if (Input.GetKey(KeyCode.Space))
@@ -90,23 +114,31 @@ public class PinguWalk : MonoBehaviour
 
             Dash_T += 1 * Time.deltaTime;
 
-            if (Dash_T < 0.35f && !isJumping)
+            if (Dash_T < 0.35f && canAirDash && isJumping)
             {
 
-
-
-                
                 Dash = true;
-                    Animator.SetBool("Dash", true);
-                    //transform.Translate(Vector3.right * Speed_Dash * Time.fixedDeltaTime);
-                    Rigidbody2D.AddForce(new Vector2(direction * 2, 0.01f), ForceMode2D.Impulse);
+                Animator.SetBool("AirDash", false);
+                Animator.SetBool("Dash", true);
+                //transform.Translate(Vector3.right * Speed_Dash * Time.fixedDeltaTime);
+                Rigidbody2D.AddForce(new Vector2(direction * 8.0f, 0.01f), ForceMode2D.Impulse);
+                Rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
 
-                    //
-                    CapsuleCol.direction = CapsuleDirection2D.Horizontal;
-                    CapsuleCol.size = DashSize;
-                    CapsuleCol.offset = DashOff;
-                    
-                
+                CapsuleCol.direction = CapsuleDirection2D.Horizontal;
+                CapsuleCol.size = DashSize;
+                CapsuleCol.offset = DashOff;
+                StartCoroutine(changeDash());
+
+            }
+            else if (Dash_T < 0.35f && !isJumping)
+            {
+                Dash = true;
+                Animator.SetBool("Dash", true);
+                //transform.Translate(Vector3.right * Speed_Dash * Time.fixedDeltaTime);
+                Rigidbody2D.AddForce(new Vector2(direction * 2, 0.01f), ForceMode2D.Impulse);
+                CapsuleCol.direction = CapsuleDirection2D.Horizontal;
+                CapsuleCol.size = DashSize;
+                CapsuleCol.offset = DashOff;
             }
             else
             {
@@ -115,9 +147,11 @@ public class PinguWalk : MonoBehaviour
                 CapsuleCol.size = StandingSize;
                 CapsuleCol.direction = CapsuleDirection2D.Vertical;
                 CapsuleCol.offset = StandingOff;
+                Rigidbody2D.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+                canAirDash = false;
             }
         }
-        else
+        else 
         {
             Dash = false;
             Animator.SetBool("Dash", false);
@@ -125,6 +159,8 @@ public class PinguWalk : MonoBehaviour
             CapsuleCol.size = StandingSize;
             CapsuleCol.direction = CapsuleDirection2D.Vertical;
             CapsuleCol.offset = StandingOff;
+            //canAirDash = false;
+            Rigidbody2D.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         }
 
 
@@ -138,9 +174,14 @@ public class PinguWalk : MonoBehaviour
 
         Vector2 dir = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
 
-       //Si agrego un if puedo hacer que corra con una letra
+        //Si agrego un if puedo hacer que corra con una letra
+        if (moveSlower) {
+            Rigidbody2D.AddForce(Vector2.right * dir * 2.5f);
+        }
+        else
+        {
             Rigidbody2D.AddForce(Vector2.right * dir * 5f);
-        
+        }
 
         if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
@@ -151,22 +192,20 @@ public class PinguWalk : MonoBehaviour
     
     private void Jump() {
         Animator.SetFloat("jumpVelocity", Rigidbody2D.velocity.y);
-        if (!collider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; };
+
+        if (!canDobleJump)
+        {
+            if (!collider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; };
+        }
+
         if (Input.GetKeyDown(KeyCode.W))
         {
 
-            if (Dash)
-            {
-
-                Rigidbody2D.AddForce(new Vector2(0f, 3.5f), ForceMode2D.Impulse);
-                dashAndJump = false;
-            }
-
-            else
-            {
-                Rigidbody2D.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
-                isJumping = true;
-            }
+            Rigidbody2D.velocity = (Vector2.up * 3f);
+            //Rigidbody2D.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
+            isJumping = true;
+            canDobleJump = false;
+            Animator.SetBool("DobleJump", false);
         }
 
     
@@ -179,7 +218,7 @@ public class PinguWalk : MonoBehaviour
         Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
         DashMove();
         FallDown();
-       
+        DashAndJump();
 
     }
 
@@ -188,8 +227,11 @@ public class PinguWalk : MonoBehaviour
         if (collider.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
 
             Animator.SetBool("isGrounded", true);
+            Animator.SetBool("AirDash", false);
+            Animator.SetBool("DobleJump", false);
             isJumping = false;
             dashAndJump = true;
+            canAirDash = false;
         }
         else
         {
@@ -224,20 +266,20 @@ public class PinguWalk : MonoBehaviour
             if (Dash)
             {
 
-                reduceHealth(1);
+                reduceHealth(3);
                 Rigidbody2D.AddForce(new Vector2(0f, 3.0f), ForceMode2D.Impulse);
                 // StartCoroutine(Knockback(0.02f, 10, transform.position));
             }
             else
             {
 
-                reduceHealth(2);
+                reduceHealth(3);
                 StartCoroutine(Knockback(0.02f, 350, transform.position));
             }
         }
 
 
-        else if (col.gameObject.tag == "Parry")
+        else if (col.gameObject.tag == "Parry" || col.gameObject.tag == "Parry 2")
 
 
         {
@@ -258,11 +300,46 @@ public class PinguWalk : MonoBehaviour
             }
 
         }
-        else if (col.gameObject.tag == "Wheel") {
+        else if (col.gameObject.tag == "Parry3" && isJumping)
+        {
 
-            reduceHealth(1);
+            Rigidbody2D.velocity = (Vector2.up * 3f);
 
         }
+        else if (col.gameObject.tag == "Parry4" && isJumping)
+        {
+
+            Rigidbody2D.velocity = (Vector2.up * 3f);
+            canAirDash = true;
+            Animator.SetBool("AirDash", true);
+
+        }
+        else if (col.gameObject.tag == "Parry5" && isJumping)
+        {
+
+            Rigidbody2D.velocity = (Vector2.up * 3f);
+            Animator.SetBool("DobleJump", true);
+            canDobleJump = true;
+
+        }
+        else if (col.gameObject.tag == "Wheel")
+        {
+
+            reduceHealth(3);
+
+        }
+        else if (col.gameObject.tag == "Finish") {
+
+            Invoke("NextLevel", 1f);
+            
+
+        }
+
+    }
+
+    private void NextLevel() {
+
+        SceneManager.LoadScene(sLevelToLoad);
 
     }
 

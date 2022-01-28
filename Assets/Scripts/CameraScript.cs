@@ -6,12 +6,23 @@ public class CameraScript : MonoBehaviour
 {
 
     public GameObject Pingu;
+    public Transform target;
+    public bool canMoveHorizontal;
 
     void Update()
     {
-        Vector3 position = transform.position;
-        position.x = Pingu.transform.position.x;
-        transform.position = position;
-        
+        if (canMoveHorizontal)
+        {
+            Vector3 position = transform.position;
+            position.x = Pingu.transform.position.x;
+            transform.position = position;
+        }
+
+        transform.position = new Vector3 (
+            transform.position.x,
+            Mathf.Clamp(target.position.y, 0f, 10f),
+            transform.position.z);
+
+            
     }
 }
