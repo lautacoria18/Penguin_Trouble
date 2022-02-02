@@ -14,6 +14,7 @@ TagManager:
   - Parry3
   - Parry4
   - Parry5
+  - Parry6
   layers:
   - Default
   - TransparentFX

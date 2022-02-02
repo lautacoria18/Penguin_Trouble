@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class PinguWalk : MonoBehaviour
+public class PinguRun : MonoBehaviour
 {
-    
+
     private Rigidbody2D Rigidbody2D;
     private float Horizontal;
     private Animator Animator;
@@ -17,9 +17,9 @@ public class PinguWalk : MonoBehaviour
 
     //Variables para el dash 
     public bool Dash;
-    public float Dash_T; 
+    public float Dash_T;
     public float Speed_Dash;
-    
+
     //ojo
     float direction = 1;
 
@@ -33,7 +33,7 @@ public class PinguWalk : MonoBehaviour
     public CapsuleCollider2D CapsuleCol;
 
     public bool dashAndJump = false;
-    
+
 
     //Matar enemigo
     private bool isJumping = false;
@@ -80,7 +80,8 @@ public class PinguWalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Horizontal != 0) {
+        if (Horizontal != 0)
+        {
             direction = Horizontal;
         }
         ProcesarMovimiento();
@@ -91,9 +92,11 @@ public class PinguWalk : MonoBehaviour
 
     }
 
-    private void DashAndJump() {
+    private void DashAndJump()
+    {
 
-        if (Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.W) && !isJumping) {
+        if (Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.W) && !isJumping)
+        {
 
             Rigidbody2D.AddForce(new Vector2(0f, 0.5f), ForceMode2D.Impulse);
 
@@ -101,13 +104,15 @@ public class PinguWalk : MonoBehaviour
 
     }
 
-    IEnumerator changeDash() {
+    IEnumerator changeDash()
+    {
 
         yield return new WaitForSeconds(0.08f);
         canAirDash = false;
     }
 
-    private void DashMove() {
+    private void DashMove()
+    {
 
         if (Input.GetKey(KeyCode.Space))
         {
@@ -151,7 +156,7 @@ public class PinguWalk : MonoBehaviour
                 canAirDash = false;
             }
         }
-        else 
+        else
         {
             Dash = false;
             Animator.SetBool("Dash", false);
@@ -168,14 +173,16 @@ public class PinguWalk : MonoBehaviour
     }
 
 
-     private void ProcesarMovimiento() {
+    private void ProcesarMovimiento()
+    {
 
         Horizontal = Input.GetAxisRaw("Horizontal");
 
         Vector2 dir = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
 
         //Si agrego un if puedo hacer que corra con una letra
-        if (moveSlower) {
+        if (moveSlower)
+        {
             Rigidbody2D.AddForce(Vector2.right * dir * 2.5f);
         }
         else
@@ -189,8 +196,9 @@ public class PinguWalk : MonoBehaviour
         Animator.SetBool("Running", Horizontal != 0.0f);
 
     }
-    
-    private void Jump() {
+
+    private void Jump()
+    {
         Animator.SetFloat("jumpVelocity", Rigidbody2D.velocity.y);
 
         if (!canDobleJump)
@@ -208,15 +216,16 @@ public class PinguWalk : MonoBehaviour
             Animator.SetBool("DobleJump", false);
         }
 
-    
+
 
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
 
 
         Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
-        DashMove();
+        //DashMove();
         FallDown();
         DashAndJump();
 
@@ -224,9 +233,10 @@ public class PinguWalk : MonoBehaviour
 
     private void CheckForGround()
     {
-        if (collider.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
+        if (collider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
 
-            Animator.SetBool("isGrounded", true);
+            //Animator.SetBool("isGrounded", true);
             Animator.SetBool("AirDash", false);
             Animator.SetBool("DobleJump", false);
             isJumping = false;
@@ -328,10 +338,11 @@ public class PinguWalk : MonoBehaviour
             reduceHealth(3);
 
         }
-        else if (col.gameObject.tag == "Finish") {
+        else if (col.gameObject.tag == "Finish")
+        {
 
             Invoke("NextLevel", 1f);
-            
+
 
         }
         else if (col.gameObject.tag == "Parry6" && isJumping)
@@ -343,7 +354,8 @@ public class PinguWalk : MonoBehaviour
 
     }
 
-    private void NextLevel() {
+    private void NextLevel()
+    {
 
         SceneManager.LoadScene(sLevelToLoad);
 
@@ -358,14 +370,16 @@ public class PinguWalk : MonoBehaviour
     }
 
 
-    private void GameOver() {
+    private void GameOver()
+    {
 
         Destroy(this.gameObject);
         FindObjectOfType<GameManager>().EndGame();
 
     }
 
-    private void FallDown() {
+    private void FallDown()
+    {
 
         if (Rigidbody2D.position.y < -10f)
         {
@@ -376,14 +390,16 @@ public class PinguWalk : MonoBehaviour
 
     }
 
-    private void HealthSystem() {
+    private void HealthSystem()
+    {
 
         if (health > numOfHearts)
         {
             health = numOfHearts;
         }
 
-        if (health <= 0) {
+        if (health <= 0)
+        {
 
             GameOver();
 
@@ -424,13 +440,15 @@ public class PinguWalk : MonoBehaviour
         health -= amount;
     }
 
-    public IEnumerator Knockback(float knockDur, float knockbackPwr, Vector3 knockbackDir) {
+    public IEnumerator Knockback(float knockDur, float knockbackPwr, Vector3 knockbackDir)
+    {
 
         Debug.Log("Funciona?");
 
         float timer = 0;
 
-        while (knockDur > timer) {
+        while (knockDur > timer)
+        {
 
             timer += Time.deltaTime;
 
