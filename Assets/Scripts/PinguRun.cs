@@ -92,85 +92,8 @@ public class PinguRun : MonoBehaviour
 
     }
 
-    private void DashAndJump()
-    {
 
-        if (Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.W) && !isJumping)
-        {
-
-            Rigidbody2D.AddForce(new Vector2(0f, 0.5f), ForceMode2D.Impulse);
-
-        }
-
-    }
-
-    IEnumerator changeDash()
-    {
-
-        yield return new WaitForSeconds(0.08f);
-        canAirDash = false;
-    }
-
-    private void DashMove()
-    {
-
-        if (Input.GetKey(KeyCode.Space))
-        {
-
-            Dash_T += 1 * Time.deltaTime;
-
-            if (Dash_T < 0.35f && canAirDash && isJumping)
-            {
-
-                Dash = true;
-                Animator.SetBool("AirDash", false);
-                Animator.SetBool("Dash", true);
-                //transform.Translate(Vector3.right * Speed_Dash * Time.fixedDeltaTime);
-                Rigidbody2D.AddForce(new Vector2(direction * 8.0f, 0.01f), ForceMode2D.Impulse);
-                Rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-
-                CapsuleCol.direction = CapsuleDirection2D.Horizontal;
-                CapsuleCol.size = DashSize;
-                CapsuleCol.offset = DashOff;
-                StartCoroutine(changeDash());
-
-            }
-            else if (Dash_T < 0.35f && !isJumping)
-            {
-                Dash = true;
-                Animator.SetBool("Dash", true);
-                //transform.Translate(Vector3.right * Speed_Dash * Time.fixedDeltaTime);
-                Rigidbody2D.AddForce(new Vector2(direction * 2, 0.01f), ForceMode2D.Impulse);
-                CapsuleCol.direction = CapsuleDirection2D.Horizontal;
-                CapsuleCol.size = DashSize;
-                CapsuleCol.offset = DashOff;
-            }
-            else
-            {
-                Dash = false;
-                Animator.SetBool("Dash", false);
-                CapsuleCol.size = StandingSize;
-                CapsuleCol.direction = CapsuleDirection2D.Vertical;
-                CapsuleCol.offset = StandingOff;
-                Rigidbody2D.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
-                canAirDash = false;
-            }
-        }
-        else
-        {
-            Dash = false;
-            Animator.SetBool("Dash", false);
-            Dash_T = 0;
-            CapsuleCol.size = StandingSize;
-            CapsuleCol.direction = CapsuleDirection2D.Vertical;
-            CapsuleCol.offset = StandingOff;
-            //canAirDash = false;
-            Rigidbody2D.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
-        }
-
-
-
-    }
+  
 
 
     private void ProcesarMovimiento()
@@ -190,8 +113,8 @@ public class PinguRun : MonoBehaviour
             Rigidbody2D.AddForce(Vector2.right * dir * 5f);
         }
 
-        if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-        else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        // if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        //else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
         Animator.SetBool("Running", Horizontal != 0.0f);
 
@@ -227,7 +150,7 @@ public class PinguRun : MonoBehaviour
         Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
         //DashMove();
         FallDown();
-        DashAndJump();
+        //DashAndJump();
 
     }
 

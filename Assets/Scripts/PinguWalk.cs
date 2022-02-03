@@ -60,6 +60,12 @@ public class PinguWalk : MonoBehaviour
     //
     public bool moveSlower;
 
+
+    //levels
+    public static List<string> levels = new List<string>();
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,14 +86,19 @@ public class PinguWalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Horizontal != 0) {
-            direction = Horizontal;
-        }
-        ProcesarMovimiento();
-        Jump();
-        CheckForGround();
-        HealthSystem();
 
+        if (!PauseMenu.GameIsPaused)
+        {
+            if (Horizontal != 0)
+            {
+                direction = Horizontal;
+            }
+            ProcesarMovimiento();
+            Jump();
+            CheckForGround();
+            HealthSystem();
+
+        }
 
     }
 
@@ -196,16 +207,19 @@ public class PinguWalk : MonoBehaviour
         if (!canDobleJump)
         {
             if (!collider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; };
+            
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) )
         {
-
-            Rigidbody2D.velocity = (Vector2.up * 3f);
-            //Rigidbody2D.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
-            isJumping = true;
-            canDobleJump = false;
-            Animator.SetBool("DobleJump", false);
+            if (!isJumping && !collider.IsTouchingLayers(LayerMask.GetMask("Wall")))
+            {
+                Rigidbody2D.velocity = (Vector2.up * 3f);
+                //Rigidbody2D.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
+                isJumping = true;
+                canDobleJump = false;
+                Animator.SetBool("DobleJump", false);
+            }
         }
 
     
@@ -345,7 +359,11 @@ public class PinguWalk : MonoBehaviour
 
     private void NextLevel() {
 
+        levels.Add(SceneManager.GetActiveScene().name);
+        
         SceneManager.LoadScene(sLevelToLoad);
+
+        Debug.Log(levels[0]);
 
     }
 
