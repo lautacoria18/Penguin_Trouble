@@ -237,6 +237,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectLevel: {fileID: 0}
+  buttons:
+  - {fileID: 53126069}
+  - {fileID: 956126901}
+  - {fileID: 1874090111}
+  - {fileID: 1976402609}
+  - {fileID: 669839633}
+  - {fileID: 1844557621}
+  - {fileID: 2079510458}
+  - {fileID: 1975362739}
+  - {fileID: 979363935}
+  - {fileID: 961725683}
 --- !u!1 &53126067
 GameObject:
   m_ObjectHideFlags: 0

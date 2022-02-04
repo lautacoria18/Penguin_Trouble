@@ -7,7 +7,7 @@ public class BackgroundInfinite : MonoBehaviour
     // Start is called before the first frame update
 
     private BoxCollider2D collider;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
 
     private float width;
     private float scrollSpeed = -2f;

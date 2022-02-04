@@ -288,7 +288,7 @@ public class PinguWalk : MonoBehaviour
             {
 
                 reduceHealth(3);
-                StartCoroutine(Knockback(0.02f, 350, transform.position));
+                //StartCoroutine(Knockback(0.02f, 350, transform.position));
             }
         }
 
@@ -360,10 +360,25 @@ public class PinguWalk : MonoBehaviour
     private void NextLevel() {
 
         levels.Add(SceneManager.GetActiveScene().name);
-        
+
+        ///
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+
+
+        if (currentLevel >= PlayerPrefs.GetInt("levelsUnlocked"))
+        {
+            PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
+
+        }
+
+
         SceneManager.LoadScene(sLevelToLoad);
 
         Debug.Log(levels[0]);
+
+
+
+
 
     }
 

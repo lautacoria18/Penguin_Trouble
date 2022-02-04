@@ -26,11 +26,7 @@ public class PinguRun : MonoBehaviour
     //Variables para el dash con buena colision
 
     public BoxCollider2D Collider2;
-    public Vector2 StandingSize;
-    public Vector2 DashSize;
-    public Vector2 StandingOff;
-    public Vector2 DashOff;
-    public CapsuleCollider2D CapsuleCol;
+
 
     public bool dashAndJump = false;
 
@@ -60,6 +56,12 @@ public class PinguRun : MonoBehaviour
     //
     public bool moveSlower;
 
+
+    //levels
+    public static List<string> levels = new List<string>();
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,11 +70,8 @@ public class PinguRun : MonoBehaviour
         collider = gameObject.GetComponent<Collider2D>();
 
         //
-        Collider2 = GetComponent<BoxCollider2D>();
-        CapsuleCol = GetComponent<CapsuleCollider2D>();
-        CapsuleCol.size = StandingSize;
-        StandingSize = CapsuleCol.size;
-        CapsuleCol.offset = StandingOff;
+
+
 
 
     }
@@ -80,20 +79,42 @@ public class PinguRun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Horizontal != 0)
-        {
-            direction = Horizontal;
-        }
-        ProcesarMovimiento();
-        Jump();
-        CheckForGround();
-        HealthSystem();
 
+        if (!PauseMenu.GameIsPaused)
+        {
+            if (Horizontal != 0)
+            {
+                direction = Horizontal;
+            }
+            ProcesarMovimiento();
+            Jump();
+            CheckForGround();
+            HealthSystem();
+
+        }
 
     }
 
+    private void DashAndJump()
+    {
 
-  
+        if (Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.W) && !isJumping)
+        {
+
+            Rigidbody2D.AddForce(new Vector2(0f, 0.5f), ForceMode2D.Impulse);
+
+        }
+
+    }
+
+    IEnumerator changeDash()
+    {
+
+        yield return new WaitForSeconds(0.08f);
+        canAirDash = false;
+    }
+
+   
 
 
     private void ProcesarMovimiento()
@@ -104,16 +125,13 @@ public class PinguRun : MonoBehaviour
         Vector2 dir = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
 
         //Si agrego un if puedo hacer que corra con una letra
-        if (moveSlower)
-        {
-            Rigidbody2D.AddForce(Vector2.right * dir * 2.5f);
-        }
-        else
-        {
-            Rigidbody2D.AddForce(Vector2.right * dir * 5f);
-        }
 
-        // if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+
+        
+            Rigidbody2D.AddForce(Vector2.right * dir * 5f);
+        
+
+        //if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         //else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
         Animator.SetBool("Running", Horizontal != 0.0f);
@@ -127,16 +145,19 @@ public class PinguRun : MonoBehaviour
         if (!canDobleJump)
         {
             if (!collider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; };
+
         }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-
-            Rigidbody2D.velocity = (Vector2.up * 3f);
-            //Rigidbody2D.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
-            isJumping = true;
-            canDobleJump = false;
-            Animator.SetBool("DobleJump", false);
+            if (!isJumping && !collider.IsTouchingLayers(LayerMask.GetMask("Wall")))
+            {
+                Rigidbody2D.velocity = (Vector2.up * 3f);
+                //Rigidbody2D.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
+                isJumping = true;
+                canDobleJump = false;
+                Animator.SetBool("DobleJump", false);
+            }
         }
 
 
@@ -159,7 +180,7 @@ public class PinguRun : MonoBehaviour
         if (collider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
 
-            //Animator.SetBool("isGrounded", true);
+            Animator.SetBool("isGrounded", true);
             Animator.SetBool("AirDash", false);
             Animator.SetBool("DobleJump", false);
             isJumping = false;
@@ -207,7 +228,7 @@ public class PinguRun : MonoBehaviour
             {
 
                 reduceHealth(3);
-                StartCoroutine(Knockback(0.02f, 350, transform.position));
+                //StartCoroutine(Knockback(0.02f, 350, transform.position));
             }
         }
 
@@ -280,7 +301,26 @@ public class PinguRun : MonoBehaviour
     private void NextLevel()
     {
 
+        levels.Add(SceneManager.GetActiveScene().name);
+
+        ///
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+
+
+        if (currentLevel >= PlayerPrefs.GetInt("levelsUnlocked"))
+        {
+            PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
+
+        }
+
+
         SceneManager.LoadScene(sLevelToLoad);
+
+        Debug.Log(levels[0]);
+
+
+
+
 
     }
 
