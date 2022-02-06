@@ -5,21 +5,34 @@ using UnityEngine;
 public class Boss_1 : MonoBehaviour
 {
     public float speed;
-    private Rigidbody2D rb;
+    private Animator Animator;
 
-    // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+
+        Animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         transform.Translate(Vector2.left * speed);
-        if (rb.position.x > -3f) {
-            speed = 0f;
-            StartCoroutine(Border());
+
+        if (!PinguRun.isDone)
+        {
+            if (transform.position.x > -3.5f)
+            {
+                speed = 0f;
+                StartCoroutine(Border());
+            }
+        }
+        else {
+
+            speed = -0.010f;
+            if (transform.position.x > -1.2f) {
+                Animator.SetBool("boom", true);
+                speed = -0.0f;
+            }
         }
         
 
@@ -32,20 +45,16 @@ public class Boss_1 : MonoBehaviour
 
         yield return new WaitForSeconds(5f);
 
-        speed = 0.005f;
-        //StartCoroutine(Border(parry));   // This makes it loop itself as long as canBlink is true
+        speed = 0.002f;
+        yield return new WaitForSeconds(15f);
+        speed = -0.002f;
+
 
     }
 
 
-    /*public void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Stop")
-        {
-            Debug.Log("Pasa?");
-            speed = 0f;
+
+
+
+
         }
-
-    }
-    */
-}

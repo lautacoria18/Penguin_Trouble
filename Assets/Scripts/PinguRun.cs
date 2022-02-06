@@ -60,6 +60,10 @@ public class PinguRun : MonoBehaviour
     //levels
     public static List<string> levels = new List<string>();
 
+    public static bool isDone = false;
+
+    public GameObject obj;
+
 
 
     // Start is called before the first frame update
@@ -86,14 +90,22 @@ public class PinguRun : MonoBehaviour
             {
                 direction = Horizontal;
             }
-            ProcesarMovimiento();
-            Jump();
-            CheckForGround();
-            HealthSystem();
+            if (!isDone)
+            {
+                ProcesarMovimiento();
+                Jump();
+                CheckForGround();
+                HealthSystem();
+            }
+            else {
+                //Rigidbody2D.velocity = new Vector2(7f, 0);
+                transform.Translate(Vector2.right * 0.01f);
 
+            }
+        }
         }
 
-    }
+    
 
     private void DashAndJump()
     {
@@ -284,11 +296,14 @@ public class PinguRun : MonoBehaviour
         }
         else if (col.gameObject.tag == "Finish")
         {
-
-            Invoke("NextLevel", 1f);
+                isDone = true;
+            obj = GameObject.FindGameObjectWithTag("End");
+            Destroy(obj);
+            //Invoke("NextLevel", 1f);
 
 
         }
+
         else if (col.gameObject.tag == "Parry6" && isJumping)
         {
 
@@ -337,6 +352,7 @@ public class PinguRun : MonoBehaviour
     {
 
         Destroy(this.gameObject);
+        isDone = false;
         FindObjectOfType<GameManager>().EndGame();
 
     }
