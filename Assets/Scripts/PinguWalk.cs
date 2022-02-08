@@ -212,7 +212,7 @@ public class PinguWalk : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W) )
         {
-            if (!isJumping && !collider.IsTouchingLayers(LayerMask.GetMask("Wall")))
+            if ((!isJumping && !collider.IsTouchingLayers(LayerMask.GetMask("Wall")) ) || canDobleJump )
             {
                 Rigidbody2D.velocity = (Vector2.up * 3f);
                 //Rigidbody2D.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
@@ -246,6 +246,7 @@ public class PinguWalk : MonoBehaviour
             isJumping = false;
             dashAndJump = true;
             canAirDash = false;
+            canDobleJump = false;
         }
         else
         {
@@ -344,7 +345,8 @@ public class PinguWalk : MonoBehaviour
         }
         else if (col.gameObject.tag == "Finish") {
 
-            Invoke("NextLevel", 1f);
+            //Invoke("NextLevel", 1f);
+            EndLevelScren.levelFinished = true;
             
 
         }
@@ -357,30 +359,7 @@ public class PinguWalk : MonoBehaviour
 
     }
 
-    private void NextLevel() {
 
-        levels.Add(SceneManager.GetActiveScene().name);
-
-        ///
-        int currentLevel = SceneManager.GetActiveScene().buildIndex;
-
-
-        if (currentLevel >= PlayerPrefs.GetInt("levelsUnlocked"))
-        {
-            PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
-
-        }
-
-
-        SceneManager.LoadScene(sLevelToLoad);
-
-        Debug.Log(levels[0]);
-
-
-
-
-
-    }
 
     IEnumerator Respawn(GameObject obj, float timeToRespawn)
     {

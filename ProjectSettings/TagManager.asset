@@ -17,6 +17,9 @@ TagManager:
   - Parry6
   - Stop
   - End
+  - Music
+  - MusicMM
+  - Music11
   layers:
   - Default
   - TransparentFX

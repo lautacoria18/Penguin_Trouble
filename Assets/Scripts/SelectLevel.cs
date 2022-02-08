@@ -38,8 +38,8 @@ public class SelectLevel : MonoBehaviour
 
    public void chooseLevel(string nivel)
     {
-
-        SceneManager.LoadScene(nivel);
+        Difficult.level = nivel;
+        SceneManager.LoadScene("SelectDifficult");
     }
     
 
