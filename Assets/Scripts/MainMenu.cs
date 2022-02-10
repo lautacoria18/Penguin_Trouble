@@ -22,7 +22,8 @@ public class MainMenu : MonoBehaviour
 
     public void newGame() {
 
-        SceneManager.LoadScene("Level_1");
+        Difficult.level = "Level_1";
+        SceneManager.LoadScene("SelectDifficult");
 
     }
 

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 1174767}
   - component: {fileID: 1174768}
   m_Layer: 0
-  m_Name: Respawn objects (10)
+  m_Name: FallingWheel25.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +152,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1174768
 MonoBehaviour:
@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 64314294}
   - component: {fileID: 64314295}
   m_Layer: 0
-  m_Name: Respawn objects (11)
+  m_Name: FallingWheel25.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -626,7 +626,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &64314295
 MonoBehaviour:
@@ -804,7 +804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &79419348
 Transform:
   m_ObjectHideFlags: 0
@@ -813,11 +813,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79419347}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.68, y: 1.4899999, z: 50}
+  m_LocalPosition: {x: 0.7399999, y: 0, z: 31.762688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 48
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &79419349
 MonoBehaviour:
@@ -851,7 +851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &84993972
 Transform:
   m_ObjectHideFlags: 0
@@ -860,11 +860,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84993971}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.65, y: 1.4899999, z: 18.237312}
+  m_LocalPosition: {x: 2.07, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 42
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &84993973
 MonoBehaviour:
@@ -964,7 +964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &108730300
 Transform:
   m_ObjectHideFlags: 0
@@ -973,11 +973,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108730299}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.29, y: 1.4899999, z: 50}
+  m_LocalPosition: {x: 1.13, y: 0, z: 31.762688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 50
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &108730301
 MonoBehaviour:
@@ -1006,7 +1006,7 @@ GameObject:
   - component: {fileID: 111334508}
   - component: {fileID: 111334509}
   m_Layer: 0
-  m_Name: Respawn objects (14)
+  m_Name: FallingWheel26.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1024,7 +1024,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &111334509
 MonoBehaviour:
@@ -1235,7 +1235,7 @@ GameObject:
   - component: {fileID: 151784544}
   - component: {fileID: 151784545}
   m_Layer: 0
-  m_Name: Respawn objects (19)
+  m_Name: FallingWheel27.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1253,7 +1253,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &151784545
 MonoBehaviour:
@@ -1678,11 +1678,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218332935}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.201, y: -0.5, z: 18.237312}
+  m_LocalPosition: {x: -2.7226558, y: -1.9294685, z: 27.978941}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1171096254}
-  m_RootOrder: 2
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &218332937
 MonoBehaviour:
@@ -1700,6 +1700,53 @@ MonoBehaviour:
   wheel: {fileID: 0}
   blueParry: {fileID: 0}
   time: 20
+--- !u!1 &225421097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225421098}
+  - component: {fileID: 225421099}
+  m_Layer: 0
+  m_Name: FallingWheel30.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &225421098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225421097}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.0499998, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &225421099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225421097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69eca6b0148bf99439c729c4e29ce901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikes: {fileID: 248040746}
+  wheel: {fileID: 0}
+  blueParry: {fileID: 0}
+  time: 30.5
 --- !u!1 &231489842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,7 +1902,7 @@ GameObject:
   - component: {fileID: 240202886}
   - component: {fileID: 240202887}
   m_Layer: 0
-  m_Name: BackWheel23.7 (1)
+  m_Name: BackWheel36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1869,11 +1916,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240202885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.201, y: -0.5, z: 18.237312}
+  m_LocalPosition: {x: -2.7226558, y: -1.9294685, z: 27.978941}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1171096254}
-  m_RootOrder: 5
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &240202887
 MonoBehaviour:
@@ -2011,7 +2058,7 @@ GameObject:
   - component: {fileID: 246406215}
   - component: {fileID: 246406216}
   m_Layer: 0
-  m_Name: Respawn objects (26)
+  m_Name: FallingWheel29.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2029,7 +2076,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 21
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &246406216
 MonoBehaviour:
@@ -2204,7 +2251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a7e7f38864d94a9bee708f2cf1223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1e-10
+  speed: 0.0005
   isVertical: 1
 --- !u!1 &262400999
 GameObject:
@@ -2506,7 +2553,7 @@ GameObject:
   - component: {fileID: 279479033}
   - component: {fileID: 279479034}
   m_Layer: 0
-  m_Name: Respawn objects (3)
+  m_Name: FallingWheel27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2520,11 +2567,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279479032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.05, y: 1.4899999, z: 18.237312}
+  m_LocalPosition: {x: 0.42834425, y: 0.060531378, z: -22.021059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 10
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &279479034
 MonoBehaviour:
@@ -7371,11 +7418,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323142145}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.201, y: -0.5, z: 18.237312}
+  m_LocalPosition: {x: -2.7226558, y: -1.9294685, z: 27.978941}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1171096254}
-  m_RootOrder: 4
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &323142147
 MonoBehaviour:
@@ -7611,57 +7658,38 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1340620867}
   - {fileID: 1174767}
   - {fileID: 64314294}
   - {fileID: 2019495501}
   - {fileID: 1091012464}
-  - {fileID: 795819476}
   - {fileID: 111334508}
   - {fileID: 1133656930}
   - {fileID: 596532176}
   - {fileID: 1566450778}
-  - {fileID: 279479033}
   - {fileID: 1498700782}
   - {fileID: 151784544}
   - {fileID: 2054866555}
   - {fileID: 1335790370}
-  - {fileID: 1491665693}
   - {fileID: 2139299039}
   - {fileID: 717619463}
   - {fileID: 1450408099}
   - {fileID: 414895757}
-  - {fileID: 994167469}
   - {fileID: 246406215}
   - {fileID: 1943803312}
   - {fileID: 754013910}
   - {fileID: 1128404227}
-  - {fileID: 1932273033}
   - {fileID: 926004345}
   - {fileID: 1310114630}
   - {fileID: 485356965}
   - {fileID: 516953703}
-  - {fileID: 2093538761}
   - {fileID: 1606959393}
   - {fileID: 1163411639}
   - {fileID: 996407409}
   - {fileID: 1187620196}
-  - {fileID: 1478499349}
   - {fileID: 973498777}
   - {fileID: 785221168}
   - {fileID: 1087761664}
   - {fileID: 1774869017}
-  - {fileID: 1013581433}
-  - {fileID: 440251399}
-  - {fileID: 84993972}
-  - {fileID: 1002807618}
-  - {fileID: 1834643693}
-  - {fileID: 762802712}
-  - {fileID: 1855948042}
-  - {fileID: 1879574067}
-  - {fileID: 79419348}
-  - {fileID: 876983425}
-  - {fileID: 108730300}
   m_Father: {fileID: 262401000}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7676,7 +7704,7 @@ GameObject:
   - component: {fileID: 399208176}
   - component: {fileID: 399208177}
   m_Layer: 0
-  m_Name: BackWheel23.7 (10)
+  m_Name: BackWheel43.5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7694,7 +7722,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1171096254}
-  m_RootOrder: 14
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &399208177
 MonoBehaviour:
@@ -7723,7 +7751,7 @@ GameObject:
   - component: {fileID: 414895757}
   - component: {fileID: 414895758}
   m_Layer: 0
-  m_Name: Respawn objects (25)
+  m_Name: FallingWheel28.8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7741,7 +7769,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 19
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &414895758
 MonoBehaviour:
@@ -7869,7 +7897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &440251399
 Transform:
   m_ObjectHideFlags: 0
@@ -7878,11 +7906,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440251398}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 1.4899999, z: 18.237312}
+  m_LocalPosition: {x: 1.37, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 41
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &440251400
 MonoBehaviour:
@@ -7911,7 +7939,7 @@ GameObject:
   - component: {fileID: 460082257}
   - component: {fileID: 460082258}
   m_Layer: 0
-  m_Name: BackWheel23.7 (3)
+  m_Name: BackWheel40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7929,7 +7957,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1171096254}
-  m_RootOrder: 7
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &460082258
 MonoBehaviour:
@@ -7994,7 +8022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a7e7f38864d94a9bee708f2cf1223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.006
+  speed: 0.025
   isVertical: 0
 --- !u!61 &479720368
 BoxCollider2D:
@@ -8172,7 +8200,7 @@ GameObject:
   - component: {fileID: 485356965}
   - component: {fileID: 485356966}
   m_Layer: 0
-  m_Name: Respawn objects (32)
+  m_Name: FallingWheel30.6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8190,7 +8218,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 28
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &485356966
 MonoBehaviour:
@@ -8313,7 +8341,7 @@ GameObject:
   - component: {fileID: 516953703}
   - component: {fileID: 516953704}
   m_Layer: 0
-  m_Name: Respawn objects (33)
+  m_Name: FallingWheel30.8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8331,7 +8359,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 29
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &516953704
 MonoBehaviour:
@@ -8360,7 +8388,7 @@ GameObject:
   - component: {fileID: 522554265}
   - component: {fileID: 522554266}
   m_Layer: 0
-  m_Name: BackWheel23.7 (6)
+  m_Name: BackWheel41.5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8374,11 +8402,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522554264}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.201, y: -0.13, z: 18.237312}
+  m_LocalPosition: {x: -2.7226558, y: -1.5594685, z: 27.978941}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1171096254}
-  m_RootOrder: 10
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &522554266
 MonoBehaviour:
@@ -8396,6 +8424,100 @@ MonoBehaviour:
   wheel: {fileID: 0}
   blueParry: {fileID: 0}
   time: 41.5
+--- !u!1 &532407464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 532407465}
+  - component: {fileID: 532407466}
+  m_Layer: 0
+  m_Name: FallingWheel26.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &532407465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532407464}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1599998, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &532407466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532407464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69eca6b0148bf99439c729c4e29ce901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikes: {fileID: 248040746}
+  wheel: {fileID: 0}
+  blueParry: {fileID: 0}
+  time: 26.5
+--- !u!1 &559091939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 559091941}
+  - component: {fileID: 559091940}
+  m_Layer: 0
+  m_Name: Dificult
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &559091940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559091939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6056a4f85f76c824cb6aaff61d78963c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsEasyMode:
+  - {fileID: 2052212765}
+  itemsHardMode:
+  - {fileID: 594523647}
+--- !u!4 &559091941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559091939}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.301229, y: 0.40729868, z: -305.86212}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &560292454
 GameObject:
   m_ObjectHideFlags: 0
@@ -8479,7 +8601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a7e7f38864d94a9bee708f2cf1223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.007
+  speed: -0.03
   isVertical: 0
 --- !u!58 &563146972
 CircleCollider2D:
@@ -8657,6 +8779,55 @@ MonoBehaviour:
   wheel: {fileID: 0}
   blueParry: {fileID: 0}
   time: 21
+--- !u!1 &594523647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 594523648}
+  m_Layer: 0
+  m_Name: HardMode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &594523648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594523647}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.9288177, y: 2.751813, z: -30.553055}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1032557191}
+  - {fileID: 440251399}
+  - {fileID: 84993972}
+  - {fileID: 1002807618}
+  - {fileID: 1834643693}
+  - {fileID: 762802712}
+  - {fileID: 1855948042}
+  - {fileID: 1879574067}
+  - {fileID: 79419348}
+  - {fileID: 876983425}
+  - {fileID: 108730300}
+  - {fileID: 1259340147}
+  - {fileID: 532407465}
+  - {fileID: 1513408082}
+  - {fileID: 1380412089}
+  - {fileID: 1649618365}
+  - {fileID: 225421098}
+  - {fileID: 1466867470}
+  - {fileID: 874495279}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &596532175
 GameObject:
   m_ObjectHideFlags: 0
@@ -8668,7 +8839,7 @@ GameObject:
   - component: {fileID: 596532176}
   - component: {fileID: 596532177}
   m_Layer: 0
-  m_Name: Respawn objects (16)
+  m_Name: FallingWheel26.6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8686,7 +8857,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &596532177
 MonoBehaviour:
@@ -9009,7 +9180,7 @@ GameObject:
   - component: {fileID: 717619463}
   - component: {fileID: 717619464}
   m_Layer: 0
-  m_Name: Respawn objects (23)
+  m_Name: FallingWheel28.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9027,7 +9198,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 17
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &717619464
 MonoBehaviour:
@@ -9056,7 +9227,7 @@ GameObject:
   - component: {fileID: 754013910}
   - component: {fileID: 754013911}
   m_Layer: 0
-  m_Name: Respawn objects (28)
+  m_Name: FallingWheel29.6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9074,7 +9245,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 23
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &754013911
 MonoBehaviour:
@@ -9108,7 +9279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &762802712
 Transform:
   m_ObjectHideFlags: 0
@@ -9117,11 +9288,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762802711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.29, y: 1.4899999, z: 50}
+  m_LocalPosition: {x: 1.13, y: 0, z: 31.762688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 45
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &762802713
 MonoBehaviour:
@@ -9150,7 +9321,7 @@ GameObject:
   - component: {fileID: 785221168}
   - component: {fileID: 785221169}
   m_Layer: 0
-  m_Name: Respawn objects (39)
+  m_Name: FallingWheel32.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9168,7 +9339,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 37
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &785221169
 MonoBehaviour:
@@ -9197,7 +9368,7 @@ GameObject:
   - component: {fileID: 795819476}
   - component: {fileID: 795819477}
   m_Layer: 0
-  m_Name: Respawn objects (2)
+  m_Name: FallingWheel26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9211,11 +9382,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795819475}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.68, y: 1.4899999, z: 18.237312}
+  m_LocalPosition: {x: -0.20165586, y: 0.060531378, z: -22.021059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 5
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &795819477
 MonoBehaviour:
@@ -9244,7 +9415,7 @@ GameObject:
   - component: {fileID: 852048661}
   - component: {fileID: 852048662}
   m_Layer: 0
-  m_Name: BackWheel23.7 (5)
+  m_Name: BackWheel41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9258,11 +9429,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852048660}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.201, y: -0.5, z: 18.237312}
+  m_LocalPosition: {x: -2.7226558, y: -1.9294685, z: 27.978941}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1171096254}
-  m_RootOrder: 9
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &852048662
 MonoBehaviour:
@@ -9327,6 +9498,53 @@ MonoBehaviour:
   wheel: {fileID: 0}
   blueParry: {fileID: 0}
   time: 12
+--- !u!1 &874495278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 874495279}
+  - component: {fileID: 874495280}
+  m_Layer: 0
+  m_Name: FallingWheel32.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &874495279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874495278}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.3899999, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &874495280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874495278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69eca6b0148bf99439c729c4e29ce901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikes: {fileID: 248040746}
+  wheel: {fileID: 0}
+  blueParry: {fileID: 0}
+  time: 32.5
 --- !u!1 &876983424
 GameObject:
   m_ObjectHideFlags: 0
@@ -9343,7 +9561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &876983425
 Transform:
   m_ObjectHideFlags: 0
@@ -9352,11 +9570,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876983424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.35, y: 1.4899999, z: 50}
+  m_LocalPosition: {x: 1.77, y: 0, z: 31.762688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 49
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &876983426
 MonoBehaviour:
@@ -9807,7 +10025,7 @@ GameObject:
   - component: {fileID: 926004345}
   - component: {fileID: 926004346}
   m_Layer: 0
-  m_Name: Respawn objects (30)
+  m_Name: FallingWheel30.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9825,7 +10043,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 26
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &926004346
 MonoBehaviour:
@@ -9959,7 +10177,7 @@ GameObject:
   - component: {fileID: 973498777}
   - component: {fileID: 973498778}
   m_Layer: 0
-  m_Name: Respawn objects (38)
+  m_Name: FallingWheel32.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9977,7 +10195,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 36
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &973498778
 MonoBehaviour:
@@ -10100,7 +10318,7 @@ GameObject:
   - component: {fileID: 994167469}
   - component: {fileID: 994167470}
   m_Layer: 0
-  m_Name: Respawn objects (5)
+  m_Name: FallingWheel29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10114,11 +10332,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994167468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.24, y: 1.4899999, z: 18.237312}
+  m_LocalPosition: {x: -0.7616558, y: 0.060531378, z: -22.021059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 20
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &994167470
 MonoBehaviour:
@@ -10147,7 +10365,7 @@ GameObject:
   - component: {fileID: 996407409}
   - component: {fileID: 996407410}
   m_Layer: 0
-  m_Name: Respawn objects (36)
+  m_Name: FallingWheel31.6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10165,7 +10383,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 33
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &996407410
 MonoBehaviour:
@@ -10182,7 +10400,7 @@ MonoBehaviour:
   spikes: {fileID: 248040746}
   wheel: {fileID: 0}
   blueParry: {fileID: 0}
-  time: 316
+  time: 31.6
 --- !u!1 &1001529385
 GameObject:
   m_ObjectHideFlags: 0
@@ -10246,7 +10464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1002807618
 Transform:
   m_ObjectHideFlags: 0
@@ -10255,11 +10473,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002807617}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.68, y: 1.4899999, z: 50}
+  m_LocalPosition: {x: 0.7399999, y: 0, z: 31.762688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 43
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1002807619
 MonoBehaviour:
@@ -10288,7 +10506,7 @@ GameObject:
   - component: {fileID: 1013581433}
   - component: {fileID: 1013581434}
   m_Layer: 0
-  m_Name: Respawn objects (9)
+  m_Name: FallingWheel33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10302,11 +10520,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1013581432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.42, y: 1.4899999, z: 18.237312}
+  m_LocalPosition: {x: 0.058344364, y: 0.060531378, z: -22.021059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 40
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1013581434
 MonoBehaviour:
@@ -10623,7 +10841,7 @@ GameObject:
   - component: {fileID: 1032557191}
   - component: {fileID: 1032557192}
   m_Layer: 0
-  m_Name: BackWheel23.7 (2)
+  m_Name: BackWheel38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10637,11 +10855,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032557190}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.201, y: -0.5, z: 18.237312}
+  m_LocalPosition: {x: -2.7810001, y: -1.9899999, z: 50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1171096254}
-  m_RootOrder: 6
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1032557192
 MonoBehaviour:
@@ -10908,7 +11126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4dad32a93fc9d045a2d86612fe1ad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.002
+  speed: -0.007
 --- !u!95 &1071567991
 Animator:
   serializedVersion: 3
@@ -10939,7 +11157,7 @@ GameObject:
   - component: {fileID: 1087761664}
   - component: {fileID: 1087761665}
   m_Layer: 0
-  m_Name: Respawn objects (40)
+  m_Name: FallingWheel32.6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10957,7 +11175,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 38
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1087761665
 MonoBehaviour:
@@ -10986,7 +11204,7 @@ GameObject:
   - component: {fileID: 1091012464}
   - component: {fileID: 1091012465}
   m_Layer: 0
-  m_Name: Respawn objects (13)
+  m_Name: FallingWheel25.8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11004,7 +11222,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1091012465
 MonoBehaviour:
@@ -11080,7 +11298,7 @@ GameObject:
   - component: {fileID: 1128404227}
   - component: {fileID: 1128404228}
   m_Layer: 0
-  m_Name: Respawn objects (29)
+  m_Name: FallingWheel29.8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11098,7 +11316,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 24
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1128404228
 MonoBehaviour:
@@ -11127,7 +11345,7 @@ GameObject:
   - component: {fileID: 1133656930}
   - component: {fileID: 1133656931}
   m_Layer: 0
-  m_Name: Respawn objects (15)
+  m_Name: FallingWheel26.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11145,7 +11363,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1133656931
 MonoBehaviour:
@@ -11318,7 +11536,7 @@ GameObject:
   - component: {fileID: 1163411639}
   - component: {fileID: 1163411640}
   m_Layer: 0
-  m_Name: Respawn objects (35)
+  m_Name: FallingWheel31.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11336,7 +11554,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 32
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1163411640
 MonoBehaviour:
@@ -11378,23 +11596,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171096253}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 507911229}
   - {fileID: 181168946}
-  - {fileID: 218332936}
-  - {fileID: 2055671244}
-  - {fileID: 323142146}
-  - {fileID: 240202886}
-  - {fileID: 1032557191}
   - {fileID: 460082257}
   - {fileID: 1673014843}
-  - {fileID: 852048661}
-  - {fileID: 522554265}
   - {fileID: 1645811005}
   - {fileID: 1762507902}
-  - {fileID: 1403690884}
   - {fileID: 399208176}
   - {fileID: 1344821228}
   m_Father: {fileID: 2139321323}
@@ -11443,7 +11653,7 @@ GameObject:
   - component: {fileID: 1187620196}
   - component: {fileID: 1187620197}
   m_Layer: 0
-  m_Name: Respawn objects (37)
+  m_Name: FallingWheel31.8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11461,7 +11671,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 34
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1187620197
 MonoBehaviour:
@@ -11526,6 +11736,53 @@ MonoBehaviour:
   wheel: {fileID: 0}
   blueParry: {fileID: 0}
   time: 56
+--- !u!1 &1259340146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1259340147}
+  - component: {fileID: 1259340148}
+  m_Layer: 0
+  m_Name: FallingWheel25.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1259340147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259340146}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.029999733, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1259340148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259340146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69eca6b0148bf99439c729c4e29ce901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikes: {fileID: 248040746}
+  wheel: {fileID: 0}
+  blueParry: {fileID: 0}
+  time: 25.5
 --- !u!1 &1291822368
 GameObject:
   m_ObjectHideFlags: 0
@@ -11743,7 +12000,7 @@ GameObject:
   - component: {fileID: 1310114630}
   - component: {fileID: 1310114631}
   m_Layer: 0
-  m_Name: Respawn objects (31)
+  m_Name: FallingWheel30.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11761,7 +12018,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 27
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1310114631
 MonoBehaviour:
@@ -11974,7 +12231,7 @@ GameObject:
   - component: {fileID: 1335790370}
   - component: {fileID: 1335790371}
   m_Layer: 0
-  m_Name: Respawn objects (21)
+  m_Name: FallingWheel27.8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11992,7 +12249,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 14
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1335790371
 MonoBehaviour:
@@ -12021,7 +12278,7 @@ GameObject:
   - component: {fileID: 1340620867}
   - component: {fileID: 1340620866}
   m_Layer: 0
-  m_Name: Respawn objects (1)
+  m_Name: FallingWheel25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12051,11 +12308,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340620865}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.34000003, y: 1.4899999, z: 18.237312}
+  m_LocalPosition: {x: 1.1383442, y: 0.060531378, z: -22.021059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 0
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1344821227
 GameObject:
@@ -12086,7 +12343,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1171096254}
-  m_RootOrder: 15
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1344821229
 MonoBehaviour:
@@ -12104,6 +12361,53 @@ MonoBehaviour:
   wheel: {fileID: 0}
   blueParry: {fileID: 0}
   time: 46
+--- !u!1 &1380412088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1380412089}
+  - component: {fileID: 1380412090}
+  m_Layer: 0
+  m_Name: FallingWheel28.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1380412089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380412088}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.0399998, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1380412090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380412088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69eca6b0148bf99439c729c4e29ce901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikes: {fileID: 248040746}
+  wheel: {fileID: 0}
+  blueParry: {fileID: 0}
+  time: 28.5
 --- !u!1 &1384361707
 GameObject:
   m_ObjectHideFlags: 0
@@ -12145,7 +12449,7 @@ GameObject:
   - component: {fileID: 1403690884}
   - component: {fileID: 1403690885}
   m_Layer: 0
-  m_Name: BackWheel23.7 (9)
+  m_Name: BackWheel43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12159,11 +12463,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403690883}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.201, y: -0.13, z: 18.237312}
+  m_LocalPosition: {x: -2.7226558, y: -1.5594685, z: 27.978941}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1171096254}
-  m_RootOrder: 13
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1403690885
 MonoBehaviour:
@@ -12239,7 +12543,7 @@ GameObject:
   - component: {fileID: 1450408099}
   - component: {fileID: 1450408100}
   m_Layer: 0
-  m_Name: Respawn objects (24)
+  m_Name: FallingWheel28.6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12257,7 +12561,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 18
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1450408100
 MonoBehaviour:
@@ -12322,6 +12626,53 @@ MonoBehaviour:
   wheel: {fileID: 0}
   blueParry: {fileID: 0}
   time: 14.5
+--- !u!1 &1466867469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1466867470}
+  - component: {fileID: 1466867471}
+  m_Layer: 0
+  m_Name: FallingWheel31.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1466867470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466867469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.77, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1466867471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466867469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69eca6b0148bf99439c729c4e29ce901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikes: {fileID: 248040746}
+  wheel: {fileID: 0}
+  blueParry: {fileID: 0}
+  time: 31.5
 --- !u!1 &1472131827
 GameObject:
   m_ObjectHideFlags: 0
@@ -12442,7 +12793,7 @@ GameObject:
   - component: {fileID: 1478499349}
   - component: {fileID: 1478499350}
   m_Layer: 0
-  m_Name: Respawn objects (8)
+  m_Name: FallingWheel32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12456,11 +12807,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478499348}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19, y: 1.4899999, z: 18.237312}
+  m_LocalPosition: {x: 1.2883441, y: 0.060531378, z: -22.021059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 35
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1478499350
 MonoBehaviour:
@@ -12616,7 +12967,7 @@ GameObject:
   - component: {fileID: 1491665693}
   - component: {fileID: 1491665694}
   m_Layer: 0
-  m_Name: Respawn objects (4)
+  m_Name: FallingWheel28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12630,11 +12981,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491665692}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12, y: 1.4899999, z: 18.237312}
+  m_LocalPosition: {x: 1.3583442, y: 0.060531378, z: -22.021059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 15
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1491665694
 MonoBehaviour:
@@ -12663,7 +13014,7 @@ GameObject:
   - component: {fileID: 1498700782}
   - component: {fileID: 1498700783}
   m_Layer: 0
-  m_Name: Respawn objects (18)
+  m_Name: FallingWheel27.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12681,7 +13032,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1498700783
 MonoBehaviour:
@@ -12699,6 +13050,53 @@ MonoBehaviour:
   wheel: {fileID: 0}
   blueParry: {fileID: 0}
   time: 27.2
+--- !u!1 &1513408081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1513408082}
+  - component: {fileID: 1513408083}
+  m_Layer: 0
+  m_Name: FallingWheel27.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1513408082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513408081}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.009999752, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1513408083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513408081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69eca6b0148bf99439c729c4e29ce901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikes: {fileID: 248040746}
+  wheel: {fileID: 0}
+  blueParry: {fileID: 0}
+  time: 27.5
 --- !u!1 &1527462922
 GameObject:
   m_ObjectHideFlags: 0
@@ -13091,7 +13489,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559570098}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -13146,7 +13544,7 @@ GameObject:
   - component: {fileID: 1566450778}
   - component: {fileID: 1566450779}
   m_Layer: 0
-  m_Name: Respawn objects (17)
+  m_Name: FallingWheel26.8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13164,7 +13562,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1566450779
 MonoBehaviour:
@@ -13223,7 +13621,7 @@ GameObject:
   - component: {fileID: 1606959393}
   - component: {fileID: 1606959394}
   m_Layer: 0
-  m_Name: Respawn objects (34)
+  m_Name: FallingWheel31.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13241,7 +13639,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 31
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1606959394
 MonoBehaviour:
@@ -13415,7 +13813,7 @@ GameObject:
   - component: {fileID: 1645811005}
   - component: {fileID: 1645811006}
   m_Layer: 0
-  m_Name: BackWheel23.7 (7)
+  m_Name: BackWheel42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13433,7 +13831,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1171096254}
-  m_RootOrder: 11
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1645811006
 MonoBehaviour:
@@ -13526,6 +13924,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647585803}
   m_CullTransparentMesh: 1
+--- !u!1 &1649618364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1649618365}
+  - component: {fileID: 1649618366}
+  m_Layer: 0
+  m_Name: FallingWheel29.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1649618365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649618364}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.3899999, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1649618366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649618364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69eca6b0148bf99439c729c4e29ce901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikes: {fileID: 248040746}
+  wheel: {fileID: 0}
+  blueParry: {fileID: 0}
+  time: 29.5
 --- !u!1 &1654418080
 GameObject:
   m_ObjectHideFlags: 0
@@ -13740,7 +14185,7 @@ GameObject:
   - component: {fileID: 1673014843}
   - component: {fileID: 1673014844}
   m_Layer: 0
-  m_Name: BackWheel23.7 (4)
+  m_Name: BackWheel40.5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13758,7 +14203,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1171096254}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1673014844
 MonoBehaviour:
@@ -30601,7 +31046,7 @@ GameObject:
   - component: {fileID: 1762507902}
   - component: {fileID: 1762507903}
   m_Layer: 0
-  m_Name: BackWheel23.7 (8)
+  m_Name: BackWheel42.5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30619,7 +31064,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1171096254}
-  m_RootOrder: 12
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1762507903
 MonoBehaviour:
@@ -30729,7 +31174,7 @@ GameObject:
   - component: {fileID: 1774869017}
   - component: {fileID: 1774869018}
   m_Layer: 0
-  m_Name: Respawn objects (41)
+  m_Name: FallingWheel32.8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30747,7 +31192,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 39
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1774869018
 MonoBehaviour:
@@ -30818,7 +31263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1834643693
 Transform:
   m_ObjectHideFlags: 0
@@ -30827,11 +31272,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834643692}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.35, y: 1.4899999, z: 50}
+  m_LocalPosition: {x: 1.77, y: 0, z: 31.762688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 44
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1834643694
 MonoBehaviour:
@@ -31007,7 +31452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a7e7f38864d94a9bee708f2cf1223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.007
+  speed: 0.03
   isVertical: 0
 --- !u!95 &1846571031
 Animator:
@@ -31091,7 +31536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1855948042
 Transform:
   m_ObjectHideFlags: 0
@@ -31100,11 +31545,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855948041}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 1.4899999, z: 50}
+  m_LocalPosition: {x: 1.37, y: 0, z: 31.762688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 46
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1855948043
 MonoBehaviour:
@@ -31185,7 +31630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1879574067
 Transform:
   m_ObjectHideFlags: 0
@@ -31194,11 +31639,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879574066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.65, y: 1.4899999, z: 50}
+  m_LocalPosition: {x: 2.07, y: 0, z: 31.762688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 47
+  m_Father: {fileID: 594523648}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1879574068
 MonoBehaviour:
@@ -31831,7 +32276,7 @@ GameObject:
   - component: {fileID: 1932273033}
   - component: {fileID: 1932273034}
   m_Layer: 0
-  m_Name: Respawn objects (6)
+  m_Name: FallingWheel30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31845,11 +32290,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932273032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.36, y: 1.4899999, z: 18.237312}
+  m_LocalPosition: {x: -0.8816557, y: 0.060531378, z: -22.021059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 25
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1932273034
 MonoBehaviour:
@@ -31878,7 +32323,7 @@ GameObject:
   - component: {fileID: 1943803312}
   - component: {fileID: 1943803313}
   m_Layer: 0
-  m_Name: Respawn objects (27)
+  m_Name: FallingWheel29.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31896,7 +32341,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 22
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1943803313
 MonoBehaviour:
@@ -31947,6 +32392,9 @@ MonoBehaviour:
   music1: {fileID: 0}
   music2: {fileID: 0}
   music3: {fileID: 0}
+  audio1: {fileID: 0}
+  audio2: {fileID: 0}
+  audio3: {fileID: 0}
 --- !u!4 &1947243470
 Transform:
   m_ObjectHideFlags: 0
@@ -32233,7 +32681,7 @@ GameObject:
   - component: {fileID: 2019495501}
   - component: {fileID: 2019495502}
   m_Layer: 0
-  m_Name: Respawn objects (12)
+  m_Name: FallingWheel25.6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32251,7 +32699,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2019495502
 MonoBehaviour:
@@ -32378,6 +32826,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2052212765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2052212766}
+  m_Layer: 0
+  m_Name: EasyMode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2052212766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052212765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.987162, y: 2.6912816, z: -8.531996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 218332936}
+  - {fileID: 2055671244}
+  - {fileID: 323142146}
+  - {fileID: 852048661}
+  - {fileID: 522554265}
+  - {fileID: 1403690884}
+  - {fileID: 240202886}
+  - {fileID: 1340620867}
+  - {fileID: 795819476}
+  - {fileID: 279479033}
+  - {fileID: 1491665693}
+  - {fileID: 994167469}
+  - {fileID: 1932273033}
+  - {fileID: 2093538761}
+  - {fileID: 1478499349}
+  - {fileID: 1013581433}
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2054866554
 GameObject:
   m_ObjectHideFlags: 0
@@ -32389,7 +32883,7 @@ GameObject:
   - component: {fileID: 2054866555}
   - component: {fileID: 2054866556}
   m_Layer: 0
-  m_Name: Respawn objects (20)
+  m_Name: FallingWheel27.6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32407,7 +32901,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 13
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2054866556
 MonoBehaviour:
@@ -32450,11 +32944,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055671243}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.201, y: -0.5, z: 18.237312}
+  m_LocalPosition: {x: -2.7226558, y: -1.9294685, z: 27.978941}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1171096254}
-  m_RootOrder: 3
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2055671245
 MonoBehaviour:
@@ -32530,7 +33024,7 @@ GameObject:
   - component: {fileID: 2093538761}
   - component: {fileID: 2093538762}
   m_Layer: 0
-  m_Name: Respawn objects (7)
+  m_Name: FallingWheel31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32544,11 +33038,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093538760}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.49, y: 1.4899999, z: 18.237312}
+  m_LocalPosition: {x: -0.0116558075, y: 0.060531378, z: -22.021059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396609123}
-  m_RootOrder: 30
+  m_Father: {fileID: 2052212766}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2093538762
 MonoBehaviour:
@@ -32762,7 +33256,7 @@ GameObject:
   - component: {fileID: 2139299039}
   - component: {fileID: 2139299040}
   m_Layer: 0
-  m_Name: Respawn objects (22)
+  m_Name: FallingWheel28.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32780,7 +33274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396609123}
-  m_RootOrder: 16
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2139299040
 MonoBehaviour:

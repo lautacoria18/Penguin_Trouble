@@ -64,7 +64,11 @@ public class PinguWalk : MonoBehaviour
     //levels
     public static List<string> levels = new List<string>();
 
-
+    void Awake()
+    {
+        //QualitySettings.vSyncCount = 0;  // VSync must be disabled
+        Application.targetFrameRate = 75;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -187,11 +191,11 @@ public class PinguWalk : MonoBehaviour
 
         //Si agrego un if puedo hacer que corra con una letra
         if (moveSlower) {
-            Rigidbody2D.AddForce(Vector2.right * dir * 2.5f);
+            Rigidbody2D.AddForce(Vector2.right * dir * 30f);
         }
         else
         {
-            Rigidbody2D.AddForce(Vector2.right * dir * 5f);
+            Rigidbody2D.AddForce(Vector2.right * dir * 40f);
         }
 
         if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);

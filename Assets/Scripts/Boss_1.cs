@@ -28,7 +28,7 @@ public class Boss_1 : MonoBehaviour
         }
         else {
 
-            speed = -0.010f;
+            speed = -0.03f;
             if (transform.position.x > -1.2f) {
                 Animator.SetBool("boom", true);
                 speed = -0.0f;
@@ -45,9 +45,9 @@ public class Boss_1 : MonoBehaviour
 
         yield return new WaitForSeconds(5f);
 
-        speed = 0.002f;
+        speed = 0.007f;
         yield return new WaitForSeconds(15f);
-        speed = -0.002f;
+        speed = -0.007f;
 
 
     }

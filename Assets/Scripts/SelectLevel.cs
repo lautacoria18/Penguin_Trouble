@@ -35,6 +35,10 @@ public class SelectLevel : MonoBehaviour
         
     }
 
+    public void returnToMM() {
+
+        SceneManager.LoadScene("MainMenu");
+    }
 
    public void chooseLevel(string nivel)
     {
