@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SelectDifficult.unity
     guid: ea209524a0411e24987fd7935f0a6bf2
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 87b97bd93fb7f814583fba73a7eea2a6
   m_configObjects: {}

@@ -299,7 +299,8 @@ public class PinguRun : MonoBehaviour
                 isDone = true;
             obj = GameObject.FindGameObjectWithTag("End");
             Destroy(obj);
-            //Invoke("NextLevel", 1f);
+            Invoke("NextLevel", 11f);
+            
 
 
         }
@@ -328,7 +329,7 @@ public class PinguRun : MonoBehaviour
 
         }
 
-
+        isDone = false;
         SceneManager.LoadScene(sLevelToLoad);
 
         Debug.Log(levels[0]);
