@@ -542,6 +542,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1289114151}
+  newGameB: {fileID: 1942924955}
+  selectLevelB: {fileID: 1787039216}
+  optionsB: {fileID: 300763982}
 --- !u!1 &802045780
 GameObject:
   m_ObjectHideFlags: 0

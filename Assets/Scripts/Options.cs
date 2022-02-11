@@ -7,10 +7,19 @@ using UnityEngine.SceneManagement;
 public class Options : MonoBehaviour
 {
     
+    public static string language = "English";
+
 
     public Text instruction;
     public Text resolution;
-    public GameObject confirmWindow;
+    public Text buttonScreen;
+    public Text buttonLanguage;
+
+    public Text resLang;
+    public Text screenLang;
+    public Text languageLang;
+    public Text applyLang;
+    public Text backToMenuLang;
 
     //Values
     public bool is60 = true;
@@ -19,7 +28,7 @@ public class Options : MonoBehaviour
     public static string currentText = "60 FPS";
     public static string text = "60 FPS";
 
-    //Screen
+    //Resolution
     public bool is720 = true;
     public static int currentW = 1360;
     public static int W = 1360;
@@ -28,6 +37,14 @@ public class Options : MonoBehaviour
     public static string currentRes = "1360 x 768";
     public static string Res = "1360 x 768";
 
+
+    //Screen
+    public bool isFull = true;
+
+    public static bool currentScreenMode = true;
+    public static bool screenMode = true;
+    public static string currentScreenText = "Fullscreen";
+    public static string ScreenText  = "Fullscreen";
 
 
     private bool hasBeenChanged = false;
@@ -61,6 +78,23 @@ public class Options : MonoBehaviour
         {
             is720 = false;
         }
+
+        buttonScreen.text = ScreenText;
+
+
+        if (ScreenText == "Fullscreen")
+        {
+
+            isFull = true;
+
+        }
+        else
+        {
+            isFull = false;
+        }
+
+
+        setLanguage();
 
     }
 
@@ -110,14 +144,83 @@ public class Options : MonoBehaviour
             currentW = 1360;
             currentH = 768;
             is720 = true;
+        }
+    }
+
+    public void changesScreen() {
+
+        if (isFull)
+        {
+
+            buttonScreen.text = "Windowed";
+            currentScreenText = "Windowed";
+            currentScreenMode = false;
+            isFull = false;
+        }
+        else {
+            buttonScreen.text = "Fullscreen";
+            currentScreenText = "Fullscreen";
+            currentScreenMode = true;
+            isFull = true;
 
         }
 
 
+    }
+
+    public void changeLanguage() {
+
+        if (language == "English")
+        {
+            language = "Español";
+            buttonLanguage.text = "Español";
+            resLang.text = "Resolución";
+            screenLang.text = "Pantalla";
+            languageLang.text = "Lenguaje";
+            applyLang.text = "Aplicar cambios";
+            backToMenuLang.text = "Regresar al menú";
+}
+        else if (language == "Español") {
+            language = "English";
+            buttonLanguage.text = "English";
+            resLang.text = "Resolution";
+            screenLang.text = "Screen";
+            languageLang.text = "Language";
+            applyLang.text = "Apply Changes";
+            backToMenuLang.text = "Back to the Menu";
+
+        }
 
     }
 
-    public void applyChanges()
+    public void setLanguage()
+    {
+        if (language == "Español")
+        {
+            language = "Español";
+            buttonLanguage.text = "Español";
+            resLang.text = "Resolución";
+            screenLang.text = "Pantalla";
+            languageLang.text = "Lenguaje";
+            applyLang.text = "Aplicar cambios";
+            backToMenuLang.text = "Regresar al menú";
+        }
+        else if (language == "English")
+        {
+            language = "English";
+            buttonLanguage.text = "English";
+            resLang.text = "Resolution";
+            screenLang.text = "Screen";
+            languageLang.text = "Language";
+            applyLang.text = "Apply Changes";
+            backToMenuLang.text = "Back to the Menu";
+
+
+
+        }
+    }
+
+        public void applyChanges()
     {
         fps = currentFps;
         Application.targetFrameRate = fps;
@@ -131,6 +234,12 @@ public class Options : MonoBehaviour
         Screen.SetResolution(W, H, true);
         Res = currentRes;
         resolution.text = Res;
+
+        //
+        screenMode = currentScreenMode;
+        Screen.SetResolution(W, H, screenMode);
+        ScreenText = currentScreenText;
+        buttonScreen.text = ScreenText;
 
 
         hasBeenChanged = true;
@@ -157,6 +266,17 @@ public class Options : MonoBehaviour
         instruction.text = text;
         currentText = text;
         currentFps = fps;
+
+        resolution.text = Res;
+        currentRes = Res;
+        currentW = W;
+        currentH = H;
+
+        buttonScreen.text = ScreenText;
+        currentScreenText = ScreenText;
+        currentScreenMode = screenMode;
+
+
 
 
     }

@@ -2,13 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
+    public Text resumeB;
+    public Text restartB;
+    public Text returnB;
+
 
     public GameObject pauseMenuUI;
+
+    void Start() {
+
+        if (Options.language == "Español")
+        {
+
+            resumeB.text = "Resumir";
+            restartB.text = "Reiniciar";
+            returnB.text = "Regresar al menu";
+        }
+        else if (Options.language == "English")
+        {
+
+            resumeB.text = "Resume";
+            restartB.text = "Restart";
+            returnB.text = "Main menu";
+
+        }
+
+
+    }
     // Update is called once per frame
     void Update()
     {

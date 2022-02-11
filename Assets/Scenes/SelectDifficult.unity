@@ -1319,6 +1319,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45bbddf074381f941b12a2539d883d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  returnB: {fileID: 1468278436}
+  easyB: {fileID: 15327844}
+  normalB: {fileID: 1956842472}
+  hardB: {fileID: 1789341676}
 --- !u!114 &1743400570
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15228,6 +15228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3356b1543e66234a9272056138bf26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resumeB: {fileID: 7527369}
+  restartB: {fileID: 868308880}
+  returnB: {fileID: 284697934}
   pauseMenuUI: {fileID: 1398563803}
 --- !u!1 &1649668238
 GameObject:

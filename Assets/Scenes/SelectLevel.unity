@@ -249,6 +249,8 @@ MonoBehaviour:
   - {fileID: 979363935}
   - {fileID: 961725683}
   - {fileID: 347248904}
+  returnB: {fileID: 953944226}
+  bossB: {fileID: 1556214697}
 --- !u!1 &53126067
 GameObject:
   m_ObjectHideFlags: 0

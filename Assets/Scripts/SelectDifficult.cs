@@ -7,10 +7,10 @@ public class SelectDifficult : MonoBehaviour
     public GameObject[] itemsEasyMode;
     public GameObject[] itemsHardMode;
     public static int difficult = 1;
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame

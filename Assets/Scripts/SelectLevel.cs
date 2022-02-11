@@ -11,8 +11,26 @@ public class SelectLevel : MonoBehaviour
     public Button[] buttons;
     int levelsUnlocked;
 
+    public Text returnB;
+    public Text bossB;
+
     void Start()
     {
+
+
+        if (Options.language == "Español")
+        {
+
+            returnB.text = "Regresar al menú";
+            bossB.text = "JEFE";
+        }
+        else if (Options.language == "English")
+        {
+
+            returnB.text = "Return";
+            bossB.text = "BOSS";
+        }
+
 
         levelsUnlocked = PlayerPrefs.GetInt("levelsUnlocked", 1);
 
