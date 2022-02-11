@@ -64,11 +64,7 @@ public class PinguWalk : MonoBehaviour
     //levels
     public static List<string> levels = new List<string>();
 
-    void Awake()
-    {
-        //QualitySettings.vSyncCount = 0;  // VSync must be disabled
-        Application.targetFrameRate = 75;
-    }
+
 
     // Start is called before the first frame update
     void Start()

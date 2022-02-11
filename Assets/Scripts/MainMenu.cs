@@ -8,6 +8,14 @@ public class MainMenu : MonoBehaviour
 
     public GameObject mainMenu;
 
+    void Awake()
+    {
+
+        Application.targetFrameRate = Options.fps;
+
+        Screen.SetResolution(Options.W, Options.H, true);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,4 +41,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("SelectLevel");
 
     }
-}
+     public void options()
+        {
+
+            SceneManager.LoadScene("Options");
+
+        }
+    }
