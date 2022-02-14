@@ -7,16 +7,16 @@ public class Activator : MonoBehaviour
 
 {
 
-    public GameObject music1;
+    public GameObject audio;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        music1.SetActive(true);
+        //music1.SetActive(true);
     }
 }

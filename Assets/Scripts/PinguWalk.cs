@@ -10,6 +10,10 @@ public class PinguWalk : MonoBehaviour
     private float Horizontal;
     private Animator Animator;
 
+  
+
+    private bool isDeath = false;
+
     //Variables para el salto
     private float fuerzaSalto = 3.0f;
     private Collider2D collider;
@@ -65,10 +69,13 @@ public class PinguWalk : MonoBehaviour
     public static List<string> levels = new List<string>();
 
 
+    public Rigidbody2D spikesMove;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        Application.targetFrameRate = 75;
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         collider = gameObject.GetComponent<Collider2D>();
@@ -89,17 +96,19 @@ public class PinguWalk : MonoBehaviour
 
         if (!PauseMenu.GameIsPaused)
         {
-            if (Horizontal != 0)
+            if (!isDeath)
             {
-                direction = Horizontal;
+                if (Horizontal != 0)
+                {
+                    direction = Horizontal;
+                }
+                ProcesarMovimiento();
+                Jump();
+                CheckForGround();
+                HealthSystem();
+
             }
-            ProcesarMovimiento();
-            Jump();
-            CheckForGround();
-            HealthSystem();
-
         }
-
     }
 
     private void DashAndJump() {
@@ -202,6 +211,7 @@ public class PinguWalk : MonoBehaviour
     }
     
     private void Jump() {
+
         Animator.SetFloat("jumpVelocity", Rigidbody2D.velocity.y);
 
         if (!canDobleJump)
@@ -214,6 +224,8 @@ public class PinguWalk : MonoBehaviour
         {
             if ((!isJumping && !collider.IsTouchingLayers(LayerMask.GetMask("Wall")) ) || canDobleJump )
             {
+                Level11Script.music3.SetActive(true);
+                SoundManager.PlaySound("jump");
                 Rigidbody2D.velocity = (Vector2.up * 3f);
                 //Rigidbody2D.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
                 isJumping = true;
@@ -317,7 +329,7 @@ public class PinguWalk : MonoBehaviour
         }
         else if (col.gameObject.tag == "Parry3" && isJumping)
         {
-
+            SoundManager.PlaySound("bounce");
             Rigidbody2D.velocity = (Vector2.up * 3f);
 
         }
@@ -356,6 +368,12 @@ public class PinguWalk : MonoBehaviour
             Rigidbody2D.velocity = (Vector2.up * 5f);
 
         }
+        else if (col.gameObject.tag == "Patrol")
+        {
+            Debug.Log("Toca");
+            spikesMove.velocity = new Vector2(-60f * Time.fixedDeltaTime, spikesMove.velocity.y);
+
+        }
 
     }
 
@@ -371,8 +389,15 @@ public class PinguWalk : MonoBehaviour
 
 
     private void GameOver() {
+        Rigidbody2D.velocity = new Vector2(0f, 0f);
+        Rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY;
+        Rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionX;
+        SoundManager.PlaySound("death");
+        isDeath = true;
 
-        Destroy(this.gameObject);
+        Animator.SetBool("isDeath", true);
+
+        //Destroy(this.gameObject);
         FindObjectOfType<GameManager>().EndGame();
 
     }

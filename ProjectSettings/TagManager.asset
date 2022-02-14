@@ -20,6 +20,7 @@ TagManager:
   - Music
   - MusicMM
   - Music11
+  - Patrol
   layers:
   - Default
   - TransparentFX
@@ -31,7 +32,7 @@ TagManager:
   - Ground
   - Enemy
   - Wall
-  - 
+  - Sliding
   - 
   - 
   - 

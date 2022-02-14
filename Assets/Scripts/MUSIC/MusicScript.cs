@@ -4,37 +4,77 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MusicScript : MonoBehaviour
 {
+    public static MusicScript inst2;
 
-    public static MusicScript inst;
+    public AudioClip levelsSong;
+    public AudioClip menuSong;
+
+    public AudioSource audioSc;
 
 
-   
 
+    void Awake()
+    {
 
-    void Awake() {
-
-    
+        audioSc = GetComponent<AudioSource>();
         
-            if (MusicScript.inst == null)
-            {
+        levelsSong = Resources.Load<AudioClip>("Nivel");
+        menuSong = Resources.Load<AudioClip>("Menu");
+        audioSc.clip = levelsSong;
 
-                MusicScript.inst = this;
+        if (MusicScript.inst2 == null)
+        {
 
-                DontDestroyOnLoad(gameObject);
+            MusicScript.inst2 = this;
 
-          
+            DontDestroyOnLoad(gameObject);
+
+            Scene level = SceneManager.GetActiveScene();
+
+            //PlaySongBySceneName(level.name);
+
+            Debug.Log(level.name);
+            audioSc.Play();
 
         }
-            else
-            {
+        else
+        {
 
- 
-        
+
+
             Destroy(gameObject);
-            }
+        }
 
-     
+    }
 
+
+    private void PlaySongBySceneName(string levelName)
+    {
+
+        switch (levelName)
+        {
+            case "Level_2":
+                audioSc.clip = levelsSong;
+                audioSc.Play();
+                break;
+            case "MainMenu":
+                audioSc.clip = menuSong;
+                audioSc.Play();
+                break;
+            case "Level_1":
+                audioSc.clip = levelsSong;
+                audioSc.Play();
+                break;
+            case "SelectDifficult":
+                audioSc.clip = menuSong;
+                audioSc.Play();
+                break;
+            default:
+                // Do whatever
+                break;
+        }
+
+        // audioSource.Play();
 
     }
 }

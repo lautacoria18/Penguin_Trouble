@@ -61,7 +61,9 @@ public class SelectLevel : MonoBehaviour
    public void chooseLevel(string nivel)
     {
         Difficult.level = nivel;
+       
         SceneManager.LoadScene("SelectDifficult");
+        Difficult.isNewGame = false;
     }
     
 

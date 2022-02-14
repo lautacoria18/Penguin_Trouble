@@ -51,6 +51,7 @@ public class MainMenu : MonoBehaviour
     public void newGame() {
 
         Difficult.level = "Level_1";
+        Difficult.isNewGame = true;
         SceneManager.LoadScene("SelectDifficult");
 
     }

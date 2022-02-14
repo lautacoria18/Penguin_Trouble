@@ -12,6 +12,8 @@ public class Difficult : MonoBehaviour
     public Text easyB;
     public Text normalB;
     public Text hardB;
+
+    public static bool isNewGame;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,8 +51,13 @@ public class Difficult : MonoBehaviour
 
 
     public void returnToSelect(){
-
+        if (!isNewGame)
+        {
             SceneManager.LoadScene("SelectLevel");
+        }
+        else {
+            SceneManager.LoadScene("MainMenu");
+        }
 }
 
 }

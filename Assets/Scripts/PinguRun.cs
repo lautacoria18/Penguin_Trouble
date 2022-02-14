@@ -69,6 +69,7 @@ public class PinguRun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Application.targetFrameRate = 75;
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         collider = gameObject.GetComponent<Collider2D>();
