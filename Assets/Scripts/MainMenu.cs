@@ -68,4 +68,11 @@ public class MainMenu : MonoBehaviour
             SceneManager.LoadScene("Options");
 
         }
+
+    public void deleteData()
+    {
+
+        PlayerPrefs.DeleteAll();
+
     }
+}

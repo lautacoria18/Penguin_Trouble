@@ -16,12 +16,16 @@ public class SpikesRunner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isVertical)
+        if (!PauseMenu.GameIsPaused)
         {
-            transform.Translate(Vector2.left * speed);
-        }
-        else {
-            transform.Translate(Vector2.down * speed);
+            if (!isVertical)
+            {
+                transform.Translate(Vector2.left * speed);
+            }
+            else
+            {
+                transform.Translate(Vector2.down * speed);
+            }
         }
     }
 }

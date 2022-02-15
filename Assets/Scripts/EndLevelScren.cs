@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class EndLevelScren : MonoBehaviour
 {
 
@@ -9,9 +10,28 @@ public class EndLevelScren : MonoBehaviour
     public GameObject EndLevelScreen;
     public string sLevelToLoad;
 
+
+    public Text nextLevelB;
+    public Text restartB;
+    public Text returnB;
+
     void Start()
     {
+        if (Options.language == "Español")
+        {
 
+            nextLevelB.text = "Siguiente nivel";
+            restartB.text = "Reiniciar";
+            returnB.text = "Regresar al menu";
+        }
+        else if (Options.language == "English")
+        {
+
+            nextLevelB.text = "Next level";
+            restartB.text = "Restart";
+            returnB.text = "Main menu";
+
+        }
     }
 
     void Update()

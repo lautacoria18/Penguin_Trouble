@@ -113,8 +113,8 @@ public class PinguWalk : MonoBehaviour
 
     private void DashAndJump() {
 
-        if (Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.W) && !isJumping) {
-
+        //if (Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.W) && !isJumping) {
+            if (Dash && (Input.GetKey(KeyCode.W) || Input.GetKey("joystick button 0")) && !isJumping) { 
             Rigidbody2D.AddForce(new Vector2(0f, 0.5f), ForceMode2D.Impulse);
 
         }
@@ -129,7 +129,7 @@ public class PinguWalk : MonoBehaviour
 
     private void DashMove() {
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey("joystick button 1"))
         {
 
             Dash_T += 1 * Time.deltaTime;
@@ -140,8 +140,9 @@ public class PinguWalk : MonoBehaviour
                 Dash = true;
                 Animator.SetBool("AirDash", false);
                 Animator.SetBool("Dash", true);
-                //transform.Translate(Vector3.right * Speed_Dash * Time.fixedDeltaTime);
-                Rigidbody2D.AddForce(new Vector2(direction * 8.0f, 0.01f), ForceMode2D.Impulse);
+                //transform.Translate(Vector3.right * direction * Speed_Dash * Time.fixedDeltaTime);
+                Rigidbody2D.velocity = new Vector2(direction * 2, Rigidbody2D.velocity.y);
+                //Rigidbody2D.AddForce(new Vector2(direction * 8.0f, 0.01f), ForceMode2D.Impulse);
                 Rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
 
                 CapsuleCol.direction = CapsuleDirection2D.Horizontal;
@@ -154,8 +155,9 @@ public class PinguWalk : MonoBehaviour
             {
                 Dash = true;
                 Animator.SetBool("Dash", true);
-                //transform.Translate(Vector3.right * Speed_Dash * Time.fixedDeltaTime);
-                Rigidbody2D.AddForce(new Vector2(direction * 2, 0.01f), ForceMode2D.Impulse);
+                //transform.Translate(Vector3.right * direction * Speed_Dash * Time.fixedDeltaTime);
+                Rigidbody2D.velocity = new Vector2(direction * 2, Rigidbody2D.velocity.y);
+                //Rigidbody2D.AddForce(new Vector2(direction * 2, 0.01f), ForceMode2D.Force);
                 CapsuleCol.direction = CapsuleDirection2D.Horizontal;
                 CapsuleCol.size = DashSize;
                 CapsuleCol.offset = DashOff;
@@ -192,6 +194,7 @@ public class PinguWalk : MonoBehaviour
 
         Horizontal = Input.GetAxisRaw("Horizontal");
 
+
         Vector2 dir = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
 
         //Si agrego un if puedo hacer que corra con una letra
@@ -220,11 +223,11 @@ public class PinguWalk : MonoBehaviour
             
         }
 
-        if (Input.GetKeyDown(KeyCode.W) )
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown("joystick button 0") )
         {
             if ((!isJumping && !collider.IsTouchingLayers(LayerMask.GetMask("Wall")) ) || canDobleJump )
             {
-                Level11Script.music3.SetActive(true);
+                
                 SoundManager.PlaySound("jump");
                 Rigidbody2D.velocity = (Vector2.up * 3f);
                 //Rigidbody2D.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
@@ -404,7 +407,7 @@ public class PinguWalk : MonoBehaviour
 
     private void FallDown() {
 
-        if (Rigidbody2D.position.y < -10f)
+        if (Rigidbody2D.position.y < -2f)
         {
 
             health = 0;

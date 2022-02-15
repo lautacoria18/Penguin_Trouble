@@ -16,26 +16,30 @@ public class Boss_1 : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector2.left * speed);
-
-        if (!PinguRun.isDone)
+        if (!PauseMenu.GameIsPaused)
         {
-            if (transform.position.x > -3.5f)
+            transform.Translate(Vector2.left * speed);
+
+            if (!PinguRun.isDone)
             {
-                speed = 0f;
-                StartCoroutine(Border());
+                if (transform.position.x > -3.5f)
+                {
+                    speed = 0f;
+                    StartCoroutine(Border());
+                }
             }
-        }
-        else {
+            else
+            {
 
-            speed = -0.03f;
-            if (transform.position.x > -1.2f) {
-                Animator.SetBool("boom", true);
-                speed = -0.0f;
+                speed = -0.03f;
+                if (transform.position.x > -1.2f)
+                {
+                    Animator.SetBool("boom", true);
+                    speed = -0.0f;
+                }
             }
-        }
-        
 
+        }
     }
 
     IEnumerator Border()

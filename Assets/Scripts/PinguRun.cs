@@ -163,8 +163,10 @@ public class PinguRun : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
+
             if (!isJumping && !collider.IsTouchingLayers(LayerMask.GetMask("Wall")))
             {
+                SoundManager.PlaySound("jump");
                 Rigidbody2D.velocity = (Vector2.up * 3f);
                 //Rigidbody2D.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
                 isJumping = true;
@@ -352,7 +354,7 @@ public class PinguRun : MonoBehaviour
 
     private void GameOver()
     {
-
+        SoundManager.PlaySound("death");
         Destroy(this.gameObject);
         isDone = false;
         FindObjectOfType<GameManager>().EndGame();
