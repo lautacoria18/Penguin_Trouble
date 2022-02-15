@@ -10,12 +10,13 @@ public class Level11Script : MonoBehaviour
 
     public string currentScene;
     public static GameObject music1;
+   public static GameObject music2;
 
     public static GameObject music3;
 
 
     public AudioSource audio1;
-    //public AudioSource audio2;
+    public AudioSource audio2;
    public AudioSource audio3;
 
 
@@ -23,10 +24,11 @@ public class Level11Script : MonoBehaviour
     void Awake()
     {
         music1 = GameObject.FindGameObjectWithTag("Music");
-        //music2 = GameObject.FindGameObjectWithTag("Music11");
+        music2 = GameObject.FindGameObjectWithTag("MusicBoss");
         music3 = GameObject.FindGameObjectWithTag("MusicMM");
 
         audio1 = music1.GetComponent<AudioSource>();
+        audio2 = music2.GetComponent<AudioSource>();
         audio3 = music3.GetComponent<AudioSource>();
 
 
@@ -99,6 +101,32 @@ public class Level11Script : MonoBehaviour
             {
                 audio1.Stop();
             }
+            if (audio2.isPlaying)
+            {
+                audio2.Stop();
+            }
+            
+
+
+
+        }
+        else if (currentScene == "Boss1")
+        {
+             if (audio1.isPlaying)
+            {
+
+                audio1.Stop();
+                }
+            if (!audio2.isPlaying)
+            {
+
+                audio2.Play();
+            }
+            if (audio3.isPlaying)
+            {
+                audio3.Stop();
+            }
+           
 
 
         }

@@ -21,6 +21,7 @@ TagManager:
   - MusicMM
   - Music11
   - Patrol
+  - MusicBoss
   layers:
   - Default
   - TransparentFX
