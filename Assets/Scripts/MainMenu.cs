@@ -36,7 +36,7 @@ public class MainMenu : MonoBehaviour
 
             newGameB.text = "New game";
             selectLevelB.text = "Select level";
-            optionsB.text = "Opctions";
+            optionsB.text = "Options";
 
         }
         
@@ -75,4 +75,13 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.DeleteAll();
 
     }
+
+
+    public void statsScene()
+    {
+
+        SceneManager.LoadScene("Stats");
+
+    }
+
 }

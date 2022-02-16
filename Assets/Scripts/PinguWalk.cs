@@ -392,15 +392,17 @@ public class PinguWalk : MonoBehaviour
 
 
     private void GameOver() {
+        //Stats.deathCount++;
+        PlayerPrefs.SetInt("DeathCount", PlayerPrefs.GetInt("DeathCount")+ 1);
         Rigidbody2D.velocity = new Vector2(0f, 0f);
         Rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY;
         Rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionX;
         SoundManager.PlaySound("death");
         isDeath = true;
 
-        Animator.SetBool("isDeath", true);
+        //Animator.SetBool("isDeath", true);
 
-        //Destroy(this.gameObject);
+        Destroy(this.gameObject);
         FindObjectOfType<GameManager>().EndGame();
 
     }
