@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stats.unity
     guid: b912bb487b299e44b9be24f535326cc9
+  - enabled: 1
+    path: Assets/Scenes/SecretLevel_1.unity
+    guid: e807e97813f77b4489c18eaa55274144
   m_configObjects: {}

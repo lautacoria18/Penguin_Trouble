@@ -84,7 +84,6 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("main menu");
         Time.timeScale = 1f;
         GameIsPaused = false;
-        Level11Script.music3.SetActive(true);
         SceneManager.LoadScene("MainMenu");
     }
 }

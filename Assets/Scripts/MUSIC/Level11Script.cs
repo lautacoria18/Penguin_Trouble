@@ -10,70 +10,35 @@ public class Level11Script : MonoBehaviour
 
     public string currentScene;
     public static GameObject music1;
-   public static GameObject music2;
-
+    public static GameObject music2;
     public static GameObject music3;
+    public static GameObject music4;
 
 
     public AudioSource audio1;
     public AudioSource audio2;
-   public AudioSource audio3;
+    public AudioSource audio3;
+    public AudioSource audio4;
 
 
-    // Start is called before the first frame update
+
     void Awake()
     {
         music1 = GameObject.FindGameObjectWithTag("Music");
         music2 = GameObject.FindGameObjectWithTag("MusicBoss");
         music3 = GameObject.FindGameObjectWithTag("MusicMM");
+        music4 = GameObject.FindGameObjectWithTag("MusicSS");
 
         audio1 = music1.GetComponent<AudioSource>();
         audio2 = music2.GetComponent<AudioSource>();
         audio3 = music3.GetComponent<AudioSource>();
+        audio4 = music4.GetComponent<AudioSource>();
 
 
-        //SceneManager.sceneLoaded += OnSceneLoaded;
-       
+
 
     }
-    /*
-        void OnEnable()
-        {
-            Debug.Log("OnEnable called");
-            SceneManager.sceneLoaded += OnSceneLoaded;
-        }
 
-        void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-        {
-            Debug.Log("ghafadfg");
-            if (scene.name == "Level_1")
-            {
-                audio1.Play();
-                if (!audio3.isPlaying)
-                {
-                    audio3.Stop();
-                }
-                //music1.SetActive(true);
-                //music3.SetActive(false);
-
-            }
-            else if (scene.name == "MainMenu")
-            {
-                audio3.Play();
-                if (!audio1.isPlaying)
-                {
-                    audio1.Stop();
-                }
-                //music3.SetActive(true);
-                //music1.SetActive(false);
-
-
-
-
-            }
-        }
-        */
-    // Update is called once per frame
     void Update()
     {
         if (currentScene == "Level_1")
@@ -85,6 +50,15 @@ public class Level11Script : MonoBehaviour
             if (audio3.isPlaying)
             {
                 audio3.Stop();
+            }
+            if (audio2.isPlaying)
+            {
+                audio2.Stop();
+            }
+            if (audio4.isPlaying)
+            {
+
+                audio4.Stop();
             }
             //music1.SetActive(true);
             //music3.SetActive(false);
@@ -105,7 +79,11 @@ public class Level11Script : MonoBehaviour
             {
                 audio2.Stop();
             }
-            
+            if (audio4.isPlaying)
+            {
+
+                audio4.Stop();
+            }
 
 
 
@@ -126,7 +104,36 @@ public class Level11Script : MonoBehaviour
             {
                 audio3.Stop();
             }
-           
+            if (audio4.isPlaying)
+            {
+
+                audio4.Stop();
+            }
+
+
+        }
+        else if (currentScene == "SecretLevel_1")
+        {
+            if (!audio4.isPlaying)
+            {
+
+                audio4.Play();
+            }
+            if (audio1.isPlaying)
+            {
+
+                audio1.Stop();
+            }
+            if (audio2.isPlaying)
+            {
+
+                audio2.Stop();
+            }
+            if (audio3.isPlaying)
+            {
+                audio3.Stop();
+            }
+
 
 
         }

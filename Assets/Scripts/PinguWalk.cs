@@ -330,12 +330,7 @@ public class PinguWalk : MonoBehaviour
 
 
                 StartCoroutine(Respawn(col.gameObject, 5f));
-                /*
-                   if (Input.GetKey(KeyCode.J))
-                   {
-                       Rigidbody2D.AddForce(new Vector2(0f, 4.0f), ForceMode2D.Impulse);
-                   }
-                   */
+                
             }
 
         }
@@ -390,6 +385,11 @@ public class PinguWalk : MonoBehaviour
         {
             SoundManager.PlaySound("krill");
             Destroy(col.gameObject);
+
+        }
+        else if (col.gameObject.tag == "SecretLevel")
+        {
+            SceneManager.LoadScene("SecretLevel_1");
 
         }
 

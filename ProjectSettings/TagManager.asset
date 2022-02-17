@@ -23,6 +23,8 @@ TagManager:
   - Patrol
   - MusicBoss
   - Krill
+  - SecretLevel
+  - MusicSS
   layers:
   - Default
   - TransparentFX
