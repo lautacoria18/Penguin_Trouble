@@ -72,9 +72,15 @@ public class PinguWalk : MonoBehaviour
     public Rigidbody2D spikesMove;
 
 
+    private float tiempo = 0f;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        
+        //tiempo += Time.deltaTime;
+        //PlayerPrefs.SetFloat("timePlayed", tiempo);
         Application.targetFrameRate = 75;
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
@@ -94,6 +100,8 @@ public class PinguWalk : MonoBehaviour
     void Update()
     {
 
+        tiempo = Time.deltaTime;
+        PlayerPrefs.SetFloat("timePlayed", PlayerPrefs.GetFloat("timePlayed") + tiempo);
         if (!PauseMenu.GameIsPaused)
         {
             if (!isDeath)
@@ -227,7 +235,8 @@ public class PinguWalk : MonoBehaviour
         {
             if ((!isJumping && !collider.IsTouchingLayers(LayerMask.GetMask("Wall")) ) || canDobleJump )
             {
-                
+                PlayerPrefs.SetInt("jumpsMade", PlayerPrefs.GetInt("jumpsMade") + 1);
+              
                 SoundManager.PlaySound("jump");
                 Rigidbody2D.velocity = (Vector2.up * 3f);
                 //Rigidbody2D.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
@@ -377,6 +386,12 @@ public class PinguWalk : MonoBehaviour
             spikesMove.velocity = new Vector2(-60f * Time.fixedDeltaTime, spikesMove.velocity.y);
 
         }
+        else if (col.gameObject.tag == "Krill")
+        {
+            SoundManager.PlaySound("krill");
+            Destroy(col.gameObject);
+
+        }
 
     }
 
@@ -394,6 +409,7 @@ public class PinguWalk : MonoBehaviour
     private void GameOver() {
         //Stats.deathCount++;
         PlayerPrefs.SetInt("DeathCount", PlayerPrefs.GetInt("DeathCount")+ 1);
+        //PlayerPrefs.SetFloat("timePlayed", PlayerPrefs.GetFloat("timePlayed") + tiempo);
         Rigidbody2D.velocity = new Vector2(0f, 0f);
         Rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY;
         Rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionX;

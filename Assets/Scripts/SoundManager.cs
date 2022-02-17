@@ -6,7 +6,7 @@ public class SoundManager : MonoBehaviour
 {
 
 
-    public static AudioClip playerJump, playerDeath, playerBounce;
+    public static AudioClip playerJump, playerDeath, playerBounce, krill;
     static AudioSource audioSrc;
     // Start is called before the first frame update
     void Start()
@@ -14,6 +14,7 @@ public class SoundManager : MonoBehaviour
         playerJump = Resources.Load<AudioClip>("Jump");
         playerDeath = Resources.Load<AudioClip>("Death");
         playerBounce = Resources.Load<AudioClip>("Bounce");
+        krill = Resources.Load<AudioClip>("Coin");
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -39,6 +40,9 @@ public class SoundManager : MonoBehaviour
                 break;
             case "bounce":
                 audioSrc.PlayOneShot(playerBounce);
+                break;
+            case "krill":
+                audioSrc.PlayOneShot(krill);
                 break;
 
         }
