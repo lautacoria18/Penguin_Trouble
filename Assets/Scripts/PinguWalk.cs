@@ -58,6 +58,7 @@ public class PinguWalk : MonoBehaviour
     //
     public int iLevelToLoad;
     public string sLevelToLoad;
+    public string secretLevelToLoad;
 
     public bool useIntegerToLoadLevel = false;
 
@@ -348,7 +349,7 @@ public class PinguWalk : MonoBehaviour
 
 
                 StartCoroutine(Respawn(col.gameObject, 5f));
-                
+
             }
 
         }
@@ -380,14 +381,16 @@ public class PinguWalk : MonoBehaviour
             reduceHealth(3);
 
         }
-        else if (col.gameObject.tag == "Finish") {
+        else if (col.gameObject.tag == "Finish")
+        {
 
 
             krillObtained();
             EndLevelScren.levelFinished = true;
+            //EndLevelScren.Pause();
 
-            
-            
+
+
 
         }
         else if (col.gameObject.tag == "Parry6" && isJumping)
@@ -414,14 +417,36 @@ public class PinguWalk : MonoBehaviour
             krill = true;
             Destroy(col.gameObject);
 
-            
+
 
         }
         else if (col.gameObject.tag == "SecretLevel")
         {
-            SceneManager.LoadScene("SecretLevel_1");
-           
+            SceneManager.LoadScene(secretLevelToLoad);
+
         }
+        else if (col.gameObject.tag == "Parachute")
+        {
+            Destroy(col.gameObject);
+            Rigidbody2D.gravityScale = 0.03f;
+            Rigidbody2D.velocity = new Vector2(Rigidbody2D.velocity.x, -1f * Time.fixedDeltaTime);
+            Animator.SetBool("parachute", true);
+
+        }
+        else if (col.gameObject.tag == "Camera")
+        {
+            Debug.Log("CAMARA");
+            CameraScript.canMoveHorizontal = true;
+            CameraScript.returnToCurrent = false;
+        }
+        else if (col.gameObject.tag == "SpikeFake")
+        {
+            Debug.Log("CAMARA");
+            CameraScript.canMoveHorizontal = false;
+            CameraScript.returnToCurrent = true;
+
+        }
+        
 
     }
 

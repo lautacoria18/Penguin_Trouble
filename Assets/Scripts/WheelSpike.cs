@@ -58,7 +58,7 @@ public class WheelSpike : MonoBehaviour
     {
         if (isVertical)
         {
-            Debug.Log("PASA?");
+            
             //transform.localScale = new Vector2(transform.localScale.x, transform.localScale.y * -1);
             walkSpeed *= -1;
         }

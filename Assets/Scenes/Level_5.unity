@@ -160,6 +160,7 @@ MonoBehaviour:
   nextLevelB: {fileID: 174273825}
   restartB: {fileID: 1683067783}
   returnB: {fileID: 1307748516}
+  nextLevelFirstButton: {fileID: 719456795}
 --- !u!114 &2649340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2261,7 +2262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4695,7 +4696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -5011,7 +5012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -6357,6 +6358,7 @@ MonoBehaviour:
   canAirDash: 0
   iLevelToLoad: 0
   sLevelToLoad: Level_6
+  secretLevelToLoad: SecretLevel_1
   useIntegerToLoadLevel: 0
   moveSlower: 0
   spikesMove: {fileID: 0}
@@ -6905,7 +6907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -8346,7 +8348,7 @@ GameObject:
   - component: {fileID: 1528178179}
   - component: {fileID: 1528178182}
   m_Layer: 0
-  m_Name: Krill
+  m_Name: SecretLevel
   m_TagString: SecretLevel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9517,7 +9519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -9650,7 +9652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -9873,7 +9875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pingu: {fileID: 1070441297}
   target: {fileID: 1070441304}
-  canMoveHorizontal: 1
+  moveHorizontal: 1
   disableMoveVertical: 0
 --- !u!81 &1824904664
 AudioListener:
@@ -10427,6 +10429,7 @@ MonoBehaviour:
   restartB: {fileID: 1292803065}
   returnB: {fileID: 493428076}
   pauseMenuUI: {fileID: 635553661}
+  pauseFirstButton: {fileID: 1193147101}
 --- !u!114 &1904271980
 MonoBehaviour:
   m_ObjectHideFlags: 0

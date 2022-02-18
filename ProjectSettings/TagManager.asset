@@ -26,6 +26,9 @@ TagManager:
   - SecretLevel
   - MusicSS
   - Patrol2
+  - Parachute
+  - SpikeFake
+  - Camera
   layers:
   - Default
   - TransparentFX

@@ -7,8 +7,15 @@ public class CameraScript : MonoBehaviour
 
     public GameObject Pingu;
     public Transform target;
-    public bool canMoveHorizontal;
+    public bool moveHorizontal;
+    public static bool canMoveHorizontal;
     public bool disableMoveVertical;
+    public static bool returnToCurrent = false;
+
+    void Start() {
+        canMoveHorizontal = moveHorizontal;
+
+    }
 
     void Update()
     {
@@ -19,12 +26,21 @@ public class CameraScript : MonoBehaviour
             transform.position = position;
         }
 
-        if(!disableMoveVertical)
-        transform.position = new Vector3 (
-            transform.position.x,
-            Mathf.Clamp(target.position.y, 0f, 10f),
-            transform.position.z);
+        if (!disableMoveVertical)
+            transform.position = new Vector3(
+                transform.position.x,
+                Mathf.Clamp(target.position.y, 0f, 10f),
+                transform.position.z);
 
+        if (returnToCurrent) {
+
+            transform.position = new Vector3(
+                -6.8f,
+                transform.position.y,
+                transform.position.z);
+
+            //transform.position = -6.8f;
+        }
             
     }
 }

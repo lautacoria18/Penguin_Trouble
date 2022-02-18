@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 public class EndLevelScren : MonoBehaviour
 {
 
@@ -14,6 +15,11 @@ public class EndLevelScren : MonoBehaviour
     public Text nextLevelB;
     public Text restartB;
     public Text returnB;
+
+    private bool end = false;
+
+
+    public GameObject nextLevelFirstButton;
 
     void Start()
     {
@@ -38,9 +44,12 @@ public class EndLevelScren : MonoBehaviour
     {
         if (levelFinished)
         {
+            if (!end)
+            {
 
-            Pause();
+                Pause();
 
+            }
         }
 
     }
@@ -63,12 +72,15 @@ public class EndLevelScren : MonoBehaviour
 
     }
 
-    void Pause()
+    public void Pause()
     {
+        end = true;
         EndLevelScreen.SetActive(true);
         Time.timeScale = 0f;
         PauseMenu.GameIsPaused = true;
-        
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(nextLevelFirstButton);
+
     }
 
     public void Resume()

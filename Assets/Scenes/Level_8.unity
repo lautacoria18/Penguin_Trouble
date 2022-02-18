@@ -2050,6 +2050,7 @@ MonoBehaviour:
   canAirDash: 0
   iLevelToLoad: 0
   sLevelToLoad: Level_9
+  secretLevelToLoad: 
   useIntegerToLoadLevel: 0
   moveSlower: 0
   spikesMove: {fileID: 0}
@@ -2433,6 +2434,7 @@ MonoBehaviour:
   nextLevelB: {fileID: 1774073447}
   restartB: {fileID: 1969285619}
   returnB: {fileID: 295458514}
+  nextLevelFirstButton: {fileID: 1437896318}
 --- !u!114 &347375384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2889,7 +2891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pingu: {fileID: 274880531}
   target: {fileID: 274880538}
-  canMoveHorizontal: 1
+  moveHorizontal: 1
   disableMoveVertical: 0
 --- !u!81 &425927070
 AudioListener:
@@ -3951,6 +3953,7 @@ MonoBehaviour:
   restartB: {fileID: 819121013}
   returnB: {fileID: 1327390085}
   pauseMenuUI: {fileID: 1899192928}
+  pauseFirstButton: {fileID: 1968838304}
 --- !u!114 &484962139
 MonoBehaviour:
   m_ObjectHideFlags: 0

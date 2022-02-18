@@ -13781,7 +13781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pingu: {fileID: 0}
   target: {fileID: 0}
-  canMoveHorizontal: 0
+  moveHorizontal: 0
   disableMoveVertical: 1
 --- !u!81 &1551010230
 AudioListener:
@@ -32533,6 +32533,7 @@ MonoBehaviour:
   restartB: {fileID: 1291822371}
   returnB: {fileID: 1485683261}
   pauseMenuUI: {fileID: 1549879117}
+  pauseFirstButton: {fileID: 1736283236}
 --- !u!114 &1899607988
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -7352,6 +7352,7 @@ MonoBehaviour:
   nextLevelB: {fileID: 1453228548}
   restartB: {fileID: 606788983}
   returnB: {fileID: 2038793955}
+  nextLevelFirstButton: {fileID: 979142860}
 --- !u!114 &508176958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12791,7 +12792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pingu: {fileID: 2015513672}
   target: {fileID: 2015513679}
-  canMoveHorizontal: 1
+  moveHorizontal: 1
   disableMoveVertical: 0
 --- !u!81 &708069337
 AudioListener:
@@ -13696,7 +13697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -13829,7 +13830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -14822,7 +14823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -15291,7 +15292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -16583,6 +16584,7 @@ MonoBehaviour:
   canAirDash: 0
   iLevelToLoad: 0
   sLevelToLoad: Level_5
+  secretLevelToLoad: 
   useIntegerToLoadLevel: 0
   moveSlower: 0
   spikesMove: {fileID: 0}
@@ -16822,6 +16824,7 @@ MonoBehaviour:
   restartB: {fileID: 181654281}
   returnB: {fileID: 212416625}
   pauseMenuUI: {fileID: 1470900144}
+  pauseFirstButton: {fileID: 1304386996}
 --- !u!114 &2064442282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16955,7 +16958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
