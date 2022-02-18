@@ -64,6 +64,8 @@ public class PinguRun : MonoBehaviour
 
     public GameObject obj;
 
+    //Krill obtenido
+    private bool krill;
 
 
     // Start is called before the first frame update
@@ -75,7 +77,20 @@ public class PinguRun : MonoBehaviour
         collider = gameObject.GetComponent<Collider2D>();
 
         //
+        Scene level = SceneManager.GetActiveScene();
+        if (PlayerPrefs.GetInt(level.name) == 1)
+        {
+            krill = true;
+            GameObject krillObj = GameObject.FindGameObjectWithTag("Krill");
+            Destroy(krillObj);
+        }
+        else
+        {
+            krill = false;
 
+
+
+        }
 
 
 
@@ -299,10 +314,11 @@ public class PinguRun : MonoBehaviour
         }
         else if (col.gameObject.tag == "Finish")
         {
+            krillObtained();
                 isDone = true;
             obj = GameObject.FindGameObjectWithTag("End");
             Destroy(obj);
-            Invoke("NextLevel", 11f);
+            Invoke("NextLevel", 9f);
             
 
 
@@ -314,7 +330,30 @@ public class PinguRun : MonoBehaviour
             Rigidbody2D.velocity = (Vector2.up * 5f);
 
         }
+        else if (col.gameObject.tag == "Krill")
+        {
+            SoundManager.PlaySound("krill");
+            krill = true;
+            Destroy(col.gameObject);
 
+
+
+        }
+
+    }
+
+
+    void krillObtained()
+    {
+        Scene level = SceneManager.GetActiveScene();
+        if (krill && PlayerPrefs.GetInt(level.name) != 1)
+        {
+
+
+            PlayerPrefs.SetInt(level.name, 1);
+
+            PlayerPrefs.SetInt("krillsObtained", PlayerPrefs.GetInt("krillsObtained") + 1);
+        }
     }
 
     private void NextLevel()

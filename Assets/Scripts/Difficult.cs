@@ -13,6 +13,8 @@ public class Difficult : MonoBehaviour
     public Text normalB;
     public Text hardB;
 
+    public Button hardButton;
+
     public static bool isNewGame;
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,16 @@ public class Difficult : MonoBehaviour
                 normalB.text = "Normal";
                 hardB.text = "Hard";
             }
+        }
+
+        if (PlayerPrefs.GetInt("krillsObtained") < 10)
+        {
+
+            hardButton.interactable = false;
+        }
+        else {
+
+            hardButton.interactable = true;
         }
     }
     // Update is called once per frame

@@ -65,14 +65,14 @@ public class PinguWalk : MonoBehaviour
     public bool moveSlower;
 
 
-    //levels
-    public static List<string> levels = new List<string>();
-
-
     public Rigidbody2D spikesMove;
 
 
     private float tiempo = 0f;
+
+
+    //Krill obtenido
+    private bool krill;
 
 
     // Start is called before the first frame update
@@ -92,6 +92,24 @@ public class PinguWalk : MonoBehaviour
         CapsuleCol.size = StandingSize;
         StandingSize = CapsuleCol.size;
         CapsuleCol.offset = StandingOff;
+
+
+        Scene level = SceneManager.GetActiveScene();
+
+        
+        if (PlayerPrefs.GetInt(level.name) == 1)
+        {
+            krill = true;
+            GameObject krillObj = GameObject.FindGameObjectWithTag("Krill");
+            Destroy(krillObj);
+        }
+        else {
+            krill = false;
+
+           
+
+        }
+        
 
 
     }
@@ -364,8 +382,11 @@ public class PinguWalk : MonoBehaviour
         }
         else if (col.gameObject.tag == "Finish") {
 
-            //Invoke("NextLevel", 1f);
+
+            krillObtained();
             EndLevelScren.levelFinished = true;
+
+            
             
 
         }
@@ -381,20 +402,40 @@ public class PinguWalk : MonoBehaviour
             spikesMove.velocity = new Vector2(-60f * Time.fixedDeltaTime, spikesMove.velocity.y);
 
         }
+        else if (col.gameObject.tag == "Patrol2")
+        {
+            Debug.Log("Tocaaaaa");
+            spikesMove.velocity = new Vector2(spikesMove.velocity.x, 30f * Time.fixedDeltaTime);
+
+        }
         else if (col.gameObject.tag == "Krill")
         {
             SoundManager.PlaySound("krill");
+            krill = true;
             Destroy(col.gameObject);
+
+            
 
         }
         else if (col.gameObject.tag == "SecretLevel")
         {
             SceneManager.LoadScene("SecretLevel_1");
-
+           
         }
 
     }
 
+    void krillObtained()
+    {
+        Scene level = SceneManager.GetActiveScene();
+        if (krill && PlayerPrefs.GetInt(level.name) != 1) { 
+        
+
+        PlayerPrefs.SetInt(level.name, 1);
+
+        PlayerPrefs.SetInt("krillsObtained", PlayerPrefs.GetInt("krillsObtained") +1 );
+        }
+    }
 
 
     IEnumerator Respawn(GameObject obj, float timeToRespawn)
@@ -407,17 +448,11 @@ public class PinguWalk : MonoBehaviour
 
 
     private void GameOver() {
-        //Stats.deathCount++;
+
         PlayerPrefs.SetInt("DeathCount", PlayerPrefs.GetInt("DeathCount")+ 1);
-        //PlayerPrefs.SetFloat("timePlayed", PlayerPrefs.GetFloat("timePlayed") + tiempo);
-        Rigidbody2D.velocity = new Vector2(0f, 0f);
-        Rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY;
-        Rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionX;
+
         SoundManager.PlaySound("death");
         isDeath = true;
-
-        //Animator.SetBool("isDeath", true);
-
         Destroy(this.gameObject);
         FindObjectOfType<GameManager>().EndGame();
 

@@ -9,6 +9,7 @@ public class Stats : MonoBehaviour
     public Text deathB;
     public Text timeB;
     public Text jumpB;
+    public Text krillsB;
 
     public Text deathTB;
     public Text timeTB;
@@ -52,6 +53,9 @@ public class Stats : MonoBehaviour
 
 
         jumpB.text = PlayerPrefs.GetInt("jumpsMade").ToString();
+
+
+        krillsB.text = PlayerPrefs.GetInt("krillsObtained").ToString();
     }
 
     // Update is called once per frame

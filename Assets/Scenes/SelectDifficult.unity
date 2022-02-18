@@ -400,7 +400,9 @@ MonoBehaviour:
   menuSong: {fileID: 0}
   currentScene: MainMenu
   audio1: {fileID: 0}
+  audio2: {fileID: 0}
   audio3: {fileID: 0}
+  audio4: {fileID: 0}
 --- !u!4 &449167321
 Transform:
   m_ObjectHideFlags: 0
@@ -1656,6 +1658,7 @@ MonoBehaviour:
   easyB: {fileID: 15327844}
   normalB: {fileID: 1956842472}
   hardB: {fileID: 1789341676}
+  hardButton: {fileID: 533091628}
 --- !u!114 &1743400570
 MonoBehaviour:
   m_ObjectHideFlags: 0
