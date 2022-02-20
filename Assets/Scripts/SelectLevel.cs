@@ -65,6 +65,14 @@ public class SelectLevel : MonoBehaviour
         SceneManager.LoadScene("SelectDifficult");
         Difficult.isNewGame = false;
     }
+
+    public void chooseSecretLevel(string nivel)
+    {
+
+
+        SceneManager.LoadScene(nivel); 
+
+    }
     
 
 

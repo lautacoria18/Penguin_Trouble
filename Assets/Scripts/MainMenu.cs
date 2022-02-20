@@ -25,6 +25,8 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CameraScript.canMoveHorizontal = true;
+        CameraScript.returnToCurrent = false;
 
         if (Options.language == "Español") {
 
