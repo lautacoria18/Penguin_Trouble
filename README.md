@@ -5,7 +5,7 @@
 :computer: El desarrollo, el game design y los sprites fueron hechos por mi.
 
 :musical_note: La música de fondo fue sacada del artista Pix, que muy amablemente subió unos tracks libre de copyright. 
-Aquí adjunto su canal de youtube https://www.youtube.com/channel/UCr3D54lk90oa-ZN9-a1mv1Q
+Aquí adjunto su canal de youtube --> <a href="https://www.youtube.com/channel/UCr3D54lk90oa-ZN9-a1mv1Q">Canal de Pix</a>
 
 :sunflower: Los fondos de los niveles y menúes fueron descargados de la página craftpix.net
 
@@ -13,6 +13,8 @@ Aquí adjunto su canal de youtube https://www.youtube.com/channel/UCr3D54lk90oa-
 
 :blush: Actualmente el juego se encuentra en desarrollo, pero se puede jugar una demo!
 Aquí abajo adjunto el link
+
+:link:<a href="https://mega.nz/file/hZJ2gbIY#j6-zJl6df6WyB5bDDESVnuDPdShRt76exJyXsp7VsqM">Click aquí para descargar Jumpingu!</a>
 
 
 ![image](https://user-images.githubusercontent.com/42523128/155060329-c6af8fb6-31f5-4dcf-adf4-5c540a228745.png)
