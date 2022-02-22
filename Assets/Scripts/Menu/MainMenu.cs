@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
 
         Application.targetFrameRate = Options.fps;
 
-        Screen.SetResolution(Options.W, Options.H, Options.screenMode);
+        Screen.SetResolution(Options.W, Options.H, Options.isFull);
     }
 
     // Start is called before the first frame update
