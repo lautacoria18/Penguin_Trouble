@@ -27,7 +27,6 @@ public class BackgroundInfinite : MonoBehaviour
         rb.velocity = new Vector2(scrollSpeed, 0);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!PinguRun.isDone)
@@ -37,7 +36,7 @@ public class BackgroundInfinite : MonoBehaviour
                 Vector2 resetPosition = new Vector2(width * 2f, 0);
                 transform.position = (Vector2)transform.position + resetPosition;
             }
-            //StartCoroutine(Border());
+
         }
         else {
             rb.velocity = new Vector2(0f, 0);
@@ -46,18 +45,5 @@ public class BackgroundInfinite : MonoBehaviour
         }
     }
 
-/*
-    IEnumerator Border()
-    {
 
-
-
-        yield return new WaitForSeconds(10f);
-        isDone = true;
-
-        Debug.Log("TERMINO EL NIVEL");
-        //StartCoroutine(Border(parry));   // This makes it loop itself as long as canBlink is true
-
-    }
-    */
 }

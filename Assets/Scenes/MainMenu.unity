@@ -1026,6 +1026,9 @@ MonoBehaviour:
   newGameB: {fileID: 1942924955}
   selectLevelB: {fileID: 1787039216}
   optionsB: {fileID: 300763982}
+  deleteB: {fileID: 590515953}
+  statsB: {fileID: 1356685691}
+  quitB: {fileID: 665007429}
 --- !u!1 &828469480
 GameObject:
   m_ObjectHideFlags: 0

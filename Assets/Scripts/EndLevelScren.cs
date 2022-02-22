@@ -19,6 +19,8 @@ public class EndLevelScren : MonoBehaviour
     private bool end = false;
 
 
+
+
     public GameObject nextLevelFirstButton;
 
     void Start()
@@ -58,14 +60,6 @@ public class EndLevelScren : MonoBehaviour
     {
 
 
-        int currentLevel = SceneManager.GetActiveScene().buildIndex;
-
-
-        if (currentLevel >= PlayerPrefs.GetInt("levelsUnlocked"))
-        {
-            PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
-
-        }
    
         Resume();
         SceneManager.LoadScene(sLevelToLoad);

@@ -23,7 +23,7 @@ public class Difficult : MonoBehaviour
             if (Options.language == "Español")
             {
 
-                returnB.text = "Regresar al menú";
+                returnB.text = "Regresar";
                 easyB.text = "Facil";
                 normalB.text = "Normal";
                 hardB.text = "Dificil";
@@ -38,7 +38,7 @@ public class Difficult : MonoBehaviour
             }
         }
 
-        if (PlayerPrefs.GetInt("krillsObtained") < 10)
+        if (PlayerPrefs.GetInt("krillsObtained") < 11)
         {
 
             hardButton.interactable = false;
@@ -47,11 +47,6 @@ public class Difficult : MonoBehaviour
 
             hardButton.interactable = true;
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
 

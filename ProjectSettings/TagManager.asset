@@ -29,6 +29,7 @@ TagManager:
   - Parachute
   - SpikeFake
   - Camera
+  - Finish2
   layers:
   - Default
   - TransparentFX

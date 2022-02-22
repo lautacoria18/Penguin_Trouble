@@ -40,7 +40,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!EndLevelScren.levelFinished)
+        if (!EndLevelScren.levelFinished || !PinguRun.isDone)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {

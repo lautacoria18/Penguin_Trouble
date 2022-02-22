@@ -10,8 +10,6 @@ public class PinguWalk : MonoBehaviour
     private float Horizontal;
     private Animator Animator;
 
-  
-
     private bool isDeath = false;
 
     //Variables para el salto
@@ -55,20 +53,18 @@ public class PinguWalk : MonoBehaviour
     public bool canAirDash = false;
 
 
-    //
-    public int iLevelToLoad;
-    public string sLevelToLoad;
+    //SecretLevel
     public string secretLevelToLoad;
+    public Animator transitionAnim;
 
-    public bool useIntegerToLoadLevel = false;
 
-    //
+    //Moverse lento depende el nivel
     public bool moveSlower;
 
-
+    //Activar trampa
     public Rigidbody2D spikesMove;
 
-
+    //Tiempo acumulado
     private float tiempo = 0f;
 
 
@@ -80,8 +76,6 @@ public class PinguWalk : MonoBehaviour
     void Start()
     {
         
-        //tiempo += Time.deltaTime;
-        //PlayerPrefs.SetFloat("timePlayed", tiempo);
         Application.targetFrameRate = 75;
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
@@ -107,15 +101,9 @@ public class PinguWalk : MonoBehaviour
         else {
             krill = false;
 
-           
-
-        }
-        
-
-
+        }      
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -147,7 +135,6 @@ public class PinguWalk : MonoBehaviour
         }
 
     }
-
     IEnumerator changeDash() {
 
         yield return new WaitForSeconds(0.08f);
@@ -211,16 +198,11 @@ public class PinguWalk : MonoBehaviour
             //canAirDash = false;
             Rigidbody2D.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         }
-
-
-
     }
-
 
      private void ProcesarMovimiento() {
 
         Horizontal = Input.GetAxisRaw("Horizontal");
-
 
         Vector2 dir = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
 
@@ -265,12 +247,9 @@ public class PinguWalk : MonoBehaviour
             }
         }
 
-    
-
     }
 
     private void FixedUpdate() {
-
 
         Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
         DashMove();
@@ -301,153 +280,152 @@ public class PinguWalk : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Enemy")
+        switch (col.gameObject.tag)
         {
+            case "Spike":
+                if (Dash)
+                {
 
-            if (isJumping)
-            {
-                Rigidbody2D.AddForce(new Vector2(0f, 5.0f), ForceMode2D.Impulse);
+                    reduceHealth(3);
+                    Rigidbody2D.AddForce(new Vector2(0f, 3.0f), ForceMode2D.Impulse);
+                }
+                else
+                { 
+                    reduceHealth(3);
+                }
+                break;
+
+            case "Parry":
+                if (isJumping)
+                {
+                    Rigidbody2D.velocity = (Vector2.up * 3f);
+                    StartCoroutine(Respawn(col.gameObject, 5f));
+                }
+                break;
+
+            case "Parry 2":
+                if (isJumping)
+                {
+                    Rigidbody2D.velocity = (Vector2.up * 3f);
+                    StartCoroutine(Respawn(col.gameObject, 5f));
+                }
+                break;
+
+            case "Parry3":
+                if (isJumping)
+                {
+                    SoundManager.PlaySound("bounce");
+                    Rigidbody2D.velocity = (Vector2.up * 3f);
+                }
+                break;
+
+            case "Parry4":
+                if (isJumping)
+                {
+                    Rigidbody2D.velocity = (Vector2.up * 3f);
+                    canAirDash = true;
+                    Animator.SetBool("AirDash", true);
+                }
+                break;
+
+            case "Parry5":
+                if (isJumping)
+                {
+                    Rigidbody2D.velocity = (Vector2.up * 3f);
+                    Animator.SetBool("DobleJump", true);
+                    canDobleJump = true;
+                }
+                break;
+
+            case "Parry6":
+                if (isJumping)
+                {
+                    SoundManager.PlaySound("bounce");
+                    Rigidbody2D.velocity = (Vector2.up * 5f);
+                }
+                break;
+
+            case "Wheel":
+                reduceHealth(3);
+                break;
+
+            case "Finish":
+                krillObtained();
+                EndLevelScren.levelFinished = true;
+                levelWon();
+                break;
+
+            case "Patrol":
+                spikesMove.velocity = new Vector2(-60f * Time.fixedDeltaTime, spikesMove.velocity.y);
+                break;
+
+            case "Patrol2":
+                spikesMove.velocity = new Vector2(spikesMove.velocity.x, 30f * Time.fixedDeltaTime);
+                break;
+
+            case "Krill":
+                SoundManager.PlaySound("krill");
+                krill = true;
                 Destroy(col.gameObject);
-            }
-            else
-            {
-                // aca falta recibir golpe y retroceder
-                health--;
+                break;
+
+            case "SecretLevel":
+
+                StartCoroutine(LoadScene());
+                break;
 
 
+            case "Parachute":
+                Destroy(col.gameObject);
+                Rigidbody2D.gravityScale = 0.03f;
+                Rigidbody2D.velocity = new Vector2(Rigidbody2D.velocity.x, -1f * Time.fixedDeltaTime);
+                Animator.SetBool("parachute", true);
+                break;
 
-            }
+            case "Camera":
+
+                CameraScript.canMoveHorizontal = true;
+                CameraScript.returnToCurrent = false;
+                break;
+
+            case "SpikeFake":
+
+                CameraScript.canMoveHorizontal = false;
+                CameraScript.returnToCurrent = true;
+                break;
+
+            default:
+                break;
         }
-        else if (col.gameObject.tag == "Spike")
+    }
+
+    void levelWon()
+    {
+
+        string currentLevel = SceneManager.GetActiveScene().name;
+
+        if (currentLevel == "SecretLevel_1")
         {
-
-            if (Dash)
-            {
-
-                reduceHealth(3);
-                Rigidbody2D.AddForce(new Vector2(0f, 3.0f), ForceMode2D.Impulse);
-                // StartCoroutine(Knockback(0.02f, 10, transform.position));
-            }
-            else
-            {
-
-                reduceHealth(3);
-                //StartCoroutine(Knockback(0.02f, 350, transform.position));
-            }
+            PlayerPrefs.SetInt("secretLevel1", 1);
         }
-
-
-        else if (col.gameObject.tag == "Parry" || col.gameObject.tag == "Parry 2")
-
-
+        else if (currentLevel == "SecretLevel_2")
         {
-            if (isJumping)
-            {
-
-
-                Rigidbody2D.velocity = (Vector2.up * 3f);
-
-
-                StartCoroutine(Respawn(col.gameObject, 5f));
-
-            }
-
+            PlayerPrefs.SetInt("secretLevel2", 1);
         }
-        else if (col.gameObject.tag == "Parry3" && isJumping)
+        else
         {
-            SoundManager.PlaySound("bounce");
-            Rigidbody2D.velocity = (Vector2.up * 3f);
-
+            regularLevelWon();
         }
-        else if (col.gameObject.tag == "Parry4" && isJumping)
+
+    }
+    void regularLevelWon() { 
+        int currentLevelN = SceneManager.GetActiveScene().buildIndex;
+
+        if (currentLevelN >= PlayerPrefs.GetInt("levelsUnlocked"))
         {
-
-            Rigidbody2D.velocity = (Vector2.up * 3f);
-            canAirDash = true;
-            Animator.SetBool("AirDash", true);
+            PlayerPrefs.SetInt("levelsUnlocked", currentLevelN + 1);
 
         }
-        else if (col.gameObject.tag == "Parry5" && isJumping)
-        {
-
-            Rigidbody2D.velocity = (Vector2.up * 3f);
-            Animator.SetBool("DobleJump", true);
-            canDobleJump = true;
-
-        }
-        else if (col.gameObject.tag == "Wheel")
-        {
-
-            reduceHealth(3);
-
-        }
-        else if (col.gameObject.tag == "Finish")
-        {
-
-
-            krillObtained();
-            EndLevelScren.levelFinished = true;
-            //EndLevelScren.Pause();
-
-
-
-
-        }
-        else if (col.gameObject.tag == "Parry6" && isJumping)
-        {
-
-            Rigidbody2D.velocity = (Vector2.up * 5f);
-
-        }
-        else if (col.gameObject.tag == "Patrol")
-        {
-            Debug.Log("Toca");
-            spikesMove.velocity = new Vector2(-60f * Time.fixedDeltaTime, spikesMove.velocity.y);
-
-        }
-        else if (col.gameObject.tag == "Patrol2")
-        {
-            Debug.Log("Tocaaaaa");
-            spikesMove.velocity = new Vector2(spikesMove.velocity.x, 30f * Time.fixedDeltaTime);
-
-        }
-        else if (col.gameObject.tag == "Krill")
-        {
-            SoundManager.PlaySound("krill");
-            krill = true;
-            Destroy(col.gameObject);
-
-
-
-        }
-        else if (col.gameObject.tag == "SecretLevel")
-        {
-            SceneManager.LoadScene(secretLevelToLoad);
-
-        }
-        else if (col.gameObject.tag == "Parachute")
-        {
-            Destroy(col.gameObject);
-            Rigidbody2D.gravityScale = 0.03f;
-            Rigidbody2D.velocity = new Vector2(Rigidbody2D.velocity.x, -1f * Time.fixedDeltaTime);
-            Animator.SetBool("parachute", true);
-
-        }
-        else if (col.gameObject.tag == "Camera")
-        {
-            Debug.Log("CAMARA");
-            CameraScript.canMoveHorizontal = true;
-            CameraScript.returnToCurrent = false;
-        }
-        else if (col.gameObject.tag == "SpikeFake")
-        {
-            Debug.Log("CAMARA");
-            CameraScript.canMoveHorizontal = false;
-            CameraScript.returnToCurrent = true;
-
-        }
-        
-
     }
 
     void krillObtained()
@@ -537,27 +515,28 @@ public class PinguWalk : MonoBehaviour
     }
 
     public void reduceHealth(int amount)
-    {
-
+    { 
         health -= amount;
     }
 
     public IEnumerator Knockback(float knockDur, float knockbackPwr, Vector3 knockbackDir) {
-
-        Debug.Log("Funciona?");
 
         float timer = 0;
 
         while (knockDur > timer) {
 
             timer += Time.deltaTime;
-
-
             Rigidbody2D.AddForce(new Vector2(0f, 5.0f), ForceMode2D.Impulse);
 
         }
         yield return 0;
+    }
 
+    IEnumerator LoadScene() {
+
+        transitionAnim.SetTrigger("end");
+        yield return new WaitForSeconds(0.4f);
+        SceneManager.LoadScene(secretLevelToLoad);
 
     }
 

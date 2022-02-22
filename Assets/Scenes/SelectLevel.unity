@@ -249,6 +249,8 @@ MonoBehaviour:
   - {fileID: 979363935}
   - {fileID: 961725683}
   - {fileID: 347248904}
+  secret1: {fileID: 1544887599}
+  secret2: {fileID: 784068959}
   returnB: {fileID: 953944226}
   bossB: {fileID: 1556214697}
 --- !u!1 &53126067
@@ -1290,7 +1292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &784068960
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1326,10 +1328,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 1844557621}
+    m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 1844557621}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2521,7 +2523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1544887600
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2558,8 +2560,8 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 669839633}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 669839633}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:

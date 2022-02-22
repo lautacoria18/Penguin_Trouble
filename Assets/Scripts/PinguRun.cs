@@ -28,9 +28,6 @@ public class PinguRun : MonoBehaviour
     public BoxCollider2D Collider2;
 
 
-    public bool dashAndJump = false;
-
-
     //Matar enemigo
     private bool isJumping = false;
 
@@ -47,18 +44,12 @@ public class PinguRun : MonoBehaviour
     public bool canAirDash = false;
 
 
-    //
-    public int iLevelToLoad;
     public string sLevelToLoad;
 
-    public bool useIntegerToLoadLevel = false;
 
     //
     public bool moveSlower;
 
-
-    //levels
-    public static List<string> levels = new List<string>();
 
     public static bool isDone = false;
 
@@ -66,6 +57,11 @@ public class PinguRun : MonoBehaviour
 
     //Krill obtenido
     private bool krill;
+
+    //Tiempo acumulado
+    private float tiempo = 0f;
+
+
 
 
     // Start is called before the first frame update
@@ -87,19 +83,15 @@ public class PinguRun : MonoBehaviour
         else
         {
             krill = false;
-
-
-
         }
-
-
 
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        tiempo = Time.deltaTime;
+        PlayerPrefs.SetFloat("timePlayed", PlayerPrefs.GetFloat("timePlayed") + tiempo);
         if (!PauseMenu.GameIsPaused)
         {
             if (Horizontal != 0)
@@ -114,7 +106,7 @@ public class PinguRun : MonoBehaviour
                 HealthSystem();
             }
             else {
-                //Rigidbody2D.velocity = new Vector2(7f, 0);
+
                 transform.Translate(Vector2.right * 0.01f);
 
             }
@@ -122,29 +114,6 @@ public class PinguRun : MonoBehaviour
         }
 
     
-
-    private void DashAndJump()
-    {
-
-        if (Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.W) && !isJumping)
-        {
-
-            Rigidbody2D.AddForce(new Vector2(0f, 0.5f), ForceMode2D.Impulse);
-
-        }
-
-    }
-
-    IEnumerator changeDash()
-    {
-
-        yield return new WaitForSeconds(0.08f);
-        canAirDash = false;
-    }
-
-   
-
-
     private void ProcesarMovimiento()
     {
 
@@ -152,15 +121,7 @@ public class PinguRun : MonoBehaviour
 
         Vector2 dir = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
 
-        //Si agrego un if puedo hacer que corra con una letra
-
-
-        
             Rigidbody2D.AddForce(Vector2.right * dir * 5f);
-        
-
-        //if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-        //else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
         Animator.SetBool("Running", Horizontal != 0.0f);
 
@@ -196,13 +157,7 @@ public class PinguRun : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-
         Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
-        //DashMove();
-        FallDown();
-        //DashAndJump();
-
     }
 
     private void CheckForGround()
@@ -214,7 +169,6 @@ public class PinguRun : MonoBehaviour
             Animator.SetBool("AirDash", false);
             Animator.SetBool("DobleJump", false);
             isJumping = false;
-            dashAndJump = true;
             canAirDash = false;
         }
         else
@@ -227,90 +181,13 @@ public class PinguRun : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Enemy")
+        if (col.gameObject.tag == "Spike")
         {
-
-            if (isJumping)
-            {
-                Rigidbody2D.AddForce(new Vector2(0f, 5.0f), ForceMode2D.Impulse);
-                Destroy(col.gameObject);
-            }
-            else
-            {
-                // aca falta recibir golpe y retroceder
-                health--;
-
-
-
-            }
-        }
-        else if (col.gameObject.tag == "Spike")
-        {
-
-            if (Dash)
-            {
-
                 reduceHealth(3);
-                Rigidbody2D.AddForce(new Vector2(0f, 3.0f), ForceMode2D.Impulse);
-                // StartCoroutine(Knockback(0.02f, 10, transform.position));
-            }
-            else
-            {
-
-                reduceHealth(3);
-                //StartCoroutine(Knockback(0.02f, 350, transform.position));
-            }
-        }
-
-
-        else if (col.gameObject.tag == "Parry" || col.gameObject.tag == "Parry 2")
-
-
-        {
-            if (isJumping)
-            {
-
-
-                Rigidbody2D.velocity = (Vector2.up * 3f);
-
-
-                StartCoroutine(Respawn(col.gameObject, 5f));
-                /*
-                   if (Input.GetKey(KeyCode.J))
-                   {
-                       Rigidbody2D.AddForce(new Vector2(0f, 4.0f), ForceMode2D.Impulse);
-                   }
-                   */
-            }
-
-        }
-        else if (col.gameObject.tag == "Parry3" && isJumping)
-        {
-
-            Rigidbody2D.velocity = (Vector2.up * 3f);
-
-        }
-        else if (col.gameObject.tag == "Parry4" && isJumping)
-        {
-
-            Rigidbody2D.velocity = (Vector2.up * 3f);
-            canAirDash = true;
-            Animator.SetBool("AirDash", true);
-
-        }
-        else if (col.gameObject.tag == "Parry5" && isJumping)
-        {
-
-            Rigidbody2D.velocity = (Vector2.up * 3f);
-            Animator.SetBool("DobleJump", true);
-            canDobleJump = true;
-
         }
         else if (col.gameObject.tag == "Wheel")
         {
-
             reduceHealth(3);
-
         }
         else if (col.gameObject.tag == "Finish")
         {
@@ -319,26 +196,34 @@ public class PinguRun : MonoBehaviour
             obj = GameObject.FindGameObjectWithTag("End");
             Destroy(obj);
             Invoke("NextLevel", 9f);
-            
-
-
+                      
         }
 
-        else if (col.gameObject.tag == "Parry6" && isJumping)
-        {
-
-            Rigidbody2D.velocity = (Vector2.up * 5f);
-
-        }
         else if (col.gameObject.tag == "Krill")
         {
             SoundManager.PlaySound("krill");
             krill = true;
             Destroy(col.gameObject);
+            
+        }
+
+    }
+    private void NextLevel()
+    {
 
 
+        ///
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+
+
+        if (currentLevel >= PlayerPrefs.GetInt("levelsUnlocked"))
+        {
+            PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
 
         }
+
+        isDone = false;
+        SceneManager.LoadScene(sLevelToLoad);
 
     }
 
@@ -356,39 +241,7 @@ public class PinguRun : MonoBehaviour
         }
     }
 
-    private void NextLevel()
-    {
 
-        levels.Add(SceneManager.GetActiveScene().name);
-
-        ///
-        int currentLevel = SceneManager.GetActiveScene().buildIndex;
-
-
-        if (currentLevel >= PlayerPrefs.GetInt("levelsUnlocked"))
-        {
-            PlayerPrefs.SetInt("levelsUnlocked", currentLevel + 1);
-
-        }
-
-        isDone = false;
-        SceneManager.LoadScene(sLevelToLoad);
-
-        Debug.Log(levels[0]);
-
-
-
-
-
-    }
-
-    IEnumerator Respawn(GameObject obj, float timeToRespawn)
-    {
-
-        obj.SetActive(false);
-        yield return new WaitForSeconds(timeToRespawn);
-        obj.SetActive(true);
-    }
 
 
     private void GameOver()
@@ -397,18 +250,6 @@ public class PinguRun : MonoBehaviour
         Destroy(this.gameObject);
         isDone = false;
         FindObjectOfType<GameManager>().EndGame();
-
-    }
-
-    private void FallDown()
-    {
-
-        if (Rigidbody2D.position.y < -10f)
-        {
-
-            health = 0;
-
-        }
 
     }
 
