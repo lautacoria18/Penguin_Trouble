@@ -1,17 +1,17 @@
 # Jumpingu Project
-Jumpingu es un juego pixel art de plataformas desarrollado con Unity.
-La mecanica del juego es simple y divertida, saltar y hacer dash, pero al mismo tiempo es un gran desafío para los que buscan un juego difícil!
+:penguin:  Jumpingu es un juego pixel art de plataformas desarrollado con Unity.
+  La mecanica del juego es simple y divertida, saltar y hacer dash, pero al mismo tiempo es un gran desafío para los que buscan un juego difícil!
 
-El desarrollo, el game design y los sprites fueron hechos por mi.
+:computer: El desarrollo, el game design y los sprites fueron hechos por mi.
 
-La música de fondo fue sacada del artista Pix, que muy amablemente subió unos tracks libre de copyright. 
+:musical_note: La música de fondo fue sacada del artista Pix, que muy amablemente subió unos tracks libre de copyright. 
 Aquí adjunto su canal de youtube https://www.youtube.com/channel/UCr3D54lk90oa-ZN9-a1mv1Q
 
-Los fondos de los niveles y menúes fueron descargados de la página craftpix.net
+:sunflower: Los fondos de los niveles y menúes fueron descargados de la página craftpix.net
 
-Los sonidos fueron descargados de la página Freesound.org
+:notes: Los sonidos fueron descargados de la página Freesound.org
 
-Actualmente el juego se encuentra en desarrollo, pero se puede jugar una demo!
+:blush: Actualmente el juego se encuentra en desarrollo, pero se puede jugar una demo!
 Aquí abajo adjunto el link
 
 
